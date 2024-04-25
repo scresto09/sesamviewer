@@ -4,14 +4,14 @@ sesam viewer - 0.5.1 - 18/12/2007
 Un visualisateur pour les fichiers sesam vitale.
 Pour le moment seul les fichiers B2 et NOEMIE sont supportés.
 Plus d'informations sur les sites:
-http://www.sesam-vitale.fr
-http://www.ameli.fr
+https://www.sesam-vitale.fr
+https://www.ameli.fr
 
 Une description de la norme B2 est disponible sur:
-http://www.ameli.fr/l-assurance-maladie/documentation-technique/norme-b2/index.php
+https://www.ameli.fr/haute-garonne/assure/documentation-technique/norme-b2
 
 Une description de la norme NOEMIE est disponible sur:
-http://www.ameli.fr/l-assurance-maladie/documentation-technique/norme-noemie/index.php
+https://www.ameli.fr/haute-garonne/assure/documentation-technique/norme-noemie
 
 
 Installation & prérequis
@@ -33,8 +33,8 @@ Auteur
 Copyright (C) 2007 Sylvain Cresto
 N'hésitez pas à me contacter par email: <scresto@gmail.com>
 
-Les mises à jour et prochaines versions seront disponible sur:
-http://scresto.free.fr/sesamviewer
+Les mises à jour et prochaines versions seront disponibles sur:
+http://scresto.free.fr/sesamviewer et https://github.com/scresto09/sesamviewer
 
 
 Licence
