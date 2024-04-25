@@ -1,0 +1,515 @@
+<?xml version="1.0"?>
+<file>
+<ligne rang="1" name="000" description="En-tête">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="3" valeur="000" presence="O" type="N"/>
+<segment order="2" name="Type d'émetteur" start="4" end="5" presence="O" type="A" saveas="emetteur">
+<valeur valeur="AN">Assemblée nationale</valeur>
+<valeur valeur="BF">Banque de france</valeur>
+<valeur valeur="CC">Caisse des cultes</valeur>
+<valeur valeur="CE">Caisse de retraite et de prévoyance des clercs et employés de notaires (CRPCEN)</valeur>
+<valeur valeur="CF">SNCF</valeur>
+<valeur valeur="CI">Chambre de commerce et d’industrie de paris</valeur>
+<valeur valeur="CM">Caisse nationale militaire de sécurité sociale (CNMSS)</valeur>
+<valeur valeur="CP">C.P.A.M.</valeur>
+<valeur valeur="CR">C.R.A.M.</valeur>
+<valeur valeur="CS">Centre de Service Complémentaire (AMC)</valeur>
+<valeur valeur="CT">Centre de traitement informatique (Régime Général)</valeur>
+<valeur valeur="EN">Établissement national des invalides de la marine (ENIM)</valeur>
+<valeur valeur="MA">MSA</valeur>
+<valeur valeur="OC">Organisme complémentaire (AMC)</valeur>
+<valeur valeur="OT">Organisme concentrateur technique (OCT)</valeur>
+<valeur valeur="PB">Port autonome de bordeaux</valeur>
+<valeur valeur="RM">Sécurité sociale minière</valeur>
+<valeur valeur="RP">R.A.T.P.</valeur>
+<valeur valeur="SE">Caisses autonomes de sécurité sociale du senat</valeur>
+<valeur valeur="SI">Autres émetteurs (sociétés civiles professionnelles...)</valeur>
+<valeur valeur="SM">Section des mutuelles nationales</valeur>
+<valeur valeur="SR">Centre informatique regional (AMPI)</valeur>
+<valeur valeur="TE">Établissements</valeur>
+<valeur valeur="TP">Autres partenaires de sante</valeur>
+</segment>
+<segment order="3" name="Numéro d'émetteur" start="6" end="19" presence="O" type="N"/>
+<segment order="4" name="Programme émetteur" start="20" end="25" presence="F" type="A"/>
+<segment order="5" name="Type de destinataire" start="26" end="27" presence="O" type="A">
+<valeur valeur="AN">Assemblée nationale</valeur>
+<valeur valeur="BF">Banque de france</valeur>
+<valeur valeur="CC">Caisse des cultes</valeur>
+<valeur valeur="CE">Caisse de retraite et de prévoyance des clercs et employés de notaires (CRPCEN)</valeur>
+<valeur valeur="CF">SNCF</valeur>
+<valeur valeur="CI">Chambre de commerce et d’industrie de paris</valeur>
+<valeur valeur="CM">Caisse nationale militaire de securite sociale (CNMSS)</valeur>
+<valeur valeur="CP">C.P.A.M.</valeur>
+<valeur valeur="CR">C.R.A.M.</valeur>
+<valeur valeur="CS">Centre de Service Complémentaire (AMC)</valeur>
+<valeur valeur="CT">Centre de traitement informatique (Régime Général)</valeur>
+<valeur valeur="EN">Établissement national des invalides de la marine (ENIM)</valeur>
+<valeur valeur="MA">MSA</valeur>
+<valeur valeur="OC">Organisme complémentaire (AMC)</valeur>
+<valeur valeur="OT">Organisme concentrateur technique (OCT)</valeur>
+<valeur valeur="PB">Port autonome de bordeaux</valeur>
+<valeur valeur="RM">Sécurité sociale minière</valeur>
+<valeur valeur="RP">R.A.T.P.</valeur>
+<valeur valeur="SE">Caisses autonomes de sécurité sociale du senat</valeur>
+<valeur valeur="SI">Autres émetteurs (sociétés civiles professionnelles...)</valeur>
+<valeur valeur="SM">Section des mutuelles nationales</valeur>
+<valeur valeur="SR">Centre informatique regional (AMPI)</valeur>
+<valeur valeur="TE">Établissements</valeur>
+<valeur valeur="TP">Autres partenaires de santé</valeur>
+</segment>
+<segment order="6" name="Numéro de destinataire" start="28" end="41" presence="O" type="A"/>
+<segment order="7" name="Programme destinataire" start="42" end="47" presence="F" type="A"/>
+<segment order="8" name="Application-type d'échange" start="48" end="49" presence="F" type="A"/>
+<segment order="9" name="Identification du fichier" start="50" end="55" presence="O" type="A"/>
+<segment order="10" name="Date de création du fichier" start="56" end="61" presence="O" type="N"/>
+<segment order="11" name="Norme utilisée - référence de l'échange" start="62" end="65" presence="O" type="A"/>
+<segment order="12" name="Version utilisée" start="66" end="67" presence="F" type="A"/>
+<segment order="13" name="Compactage" start="68" end="68" presence="F" type="A"/>
+<segment order="14" name="Cryptage" start="69" end="69" presence="F" type="A">
+<valeur valeur="O">Oui</valeur>
+<valeur valeur="N">Non</valeur>
+</segment>
+<segment order="15" name="Unité monétaire" start="70" end="70" presence="O" type="A">
+<valeur valeur="U">Euro</valeur>
+</segment>
+<segment order="16" name="Type de flux" start="71" end="71" presence="F" type="A">
+<valeur valeur=" ">Réel</valeur>
+<valeur valeur="R">Réel</valeur>
+<valeur valeur="T">Test</valeur>
+<valeur valeur="D">Démo</valeur>
+</segment>
+<segment order="17" name="Blanc" start="72" end="82" presence="F" type="A"/>
+<segment order="18" name="Longueur d'enregistrement" start="83" end="85" presence="O" type="N"/>
+<segment order="19" name="Mot de passe" start="86" end="91" presence="F" type="A"/>
+<segment order="20" name="Zone message" start="92" end="128" presence="F" type="A"/>
+</ligne>
+<ligne rang="2" name="020" description="Mandataire">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="3" valeur="020" presence="O" type="N"/>
+<segment saveas="rang" order="2" name="Niveau de rupture" start="4" end="5" valeur="01" presence="O" type="N"/>
+<segment order="3" name="Numéro de destinataire de règlement" start="6" end="20" presence="O" type="N"/>
+<segment pkey="O" order="4" name="Délimiteur fin d'entité" start="21" end="21" presence="O" type="A" valeur="@"/>
+</ligne>
+<ligne rang="2" name="040" description="Destinataire de règlement">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="3" valeur="040" presence="O" type="N"/>
+<segment saveas="rang" order="2" name="Niveau de rupture" start="4" end="5" valeur="02" presence="O" type="N"/>
+<segment order="3" name="Numéro de destinataire de règlement" start="6" end="20" presence="O" type="N"/>
+<segment pkey="O" order="4" name="Délimiteur fin d'entité" start="21" end="21" presence="O" type="A" valeur="@"/>
+</ligne>
+<ligne rang="2" name="070" description="Date comptable">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="3" valeur="070" presence="O" type="N"/>
+<segment saveas="rang" order="2" name="Niveau de rupture" start="4" end="5" valeur="02" presence="O" type="N"/>
+<segment order="3" name="Date de la journée comptable" start="6" end="11" presence="O" type="N"/>
+<segment pkey="O" order="4" name="Délimiteur fin d'entité" start="12" end="12" presence="O" type="A" valeur="@"/>
+</ligne>
+<ligne rang="2" name="071" description="Date comptable et référence du virement">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="3" valeur="071" presence="O" type="N"/>
+<segment saveas="rang" order="2" name="Niveau de rupture" start="4" end="5" valeur="02" presence="O" type="N"/>
+<segment order="3" name="Date de la journée comptable ou date d'émission du virement" start="6" end="11" presence="O" type="N"/>
+<segment order="4" name="Libellé du virement - ligne 1" start="12" end="43" presence="O" type="A"/>
+<segment order="5" name="Libellé du virement - ligne 2" start="44" end="75" presence="F" type="A"/>
+<segment order="6" name="Organisme payeur" start="76" end="85" presence="F" type="A"/>
+<segment pkey="O" order="7" name="Délimiteur fin d'entité" start="86" end="86" presence="O" type="A" valeur="@"/>
+</ligne>
+<ligne rang="2" name="080" description="Lot">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="3" valeur="080" presence="O" type="N"/>
+<segment saveas="rang" order="2" name="Niveau de rupture" start="4" end="5" presence="O" type="N"/>
+<segment order="3" name="Date de constitution du lot" start="6" end="11" presence="O" type="N"/>
+<segment order="4" name="Numéro de lot" start="12" end="14" presence="O" type="N"/>
+<segment pkey="O" order="5" name="Délimiteur fin d'entité" start="15" end="15" presence="O" type="A" valeur="@"/>
+</ligne>
+<ligne rang="2" name="081" description="Type de retour">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="3" valeur="081" presence="O" type="N"/>
+<segment saveas="rang" order="2" name="Niveau de rupture" start="4" end="5" valeur="02" presence="O" type="N"/>
+<segment order="3" name="Code du type de retour" start="6" end="7" presence="O" type="N">
+<valeur valeur="01">Retours sur prestations transmises en flux électroniques</valeur>
+<valeur valeur="02">Retours sur prestations en facturation papier</valeur>
+<valeur valeur="03">Paiements ponctuels ou forfaitaires</valeur>
+<valeur valeur="04">Rappels sur prestations</valeur>
+<valeur valeur="05">Retenues</valeur>
+</segment>
+<segment order="4" name="Numéro du lieu d'éxecution de l'acte" start="8" end="21" presence="F" type="A"/>
+<segment pkey="O" order="5" name="Délimiteur fin d'entité" start="22" end="22" presence="O" type="A" valeur="@"/>
+</ligne>
+<ligne rang="2" name="100" description="Facture">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="3" valeur="100" presence="O" type="N"/>
+<segment saveas="rang" order="2" name="Niveau de rupture" start="4" end="5" presence="O" type="N"/>
+<segment order="3" name="Numéro de facture" start="6" end="14" presence="O" type="N"/>
+<segment pkey="O" order="4" name="Délimiteur fin d'entité" start="15" end="15" presence="O" type="A" valeur="@"/>
+</ligne>
+<ligne rang="2" name="102" description="Facture">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="3" valeur="102" presence="O" type="N"/>
+<segment saveas="rang" order="2" name="Niveau de rupture" start="4" end="5" presence="O" type="N"/>
+<segment order="3" name="N° de facture" start="6" end="14" presence="O" type="A"/>
+<segment order="4" name="Complément au n° de facture" start="15" end="20" presence="F" type="A"/>
+<segment order="5" name="N° de lot" start="21" end="23" presence="F" type="A"/>
+<segment order="6" name="Date de création du lot" start="24" end="29" presence="F" type="N"/>
+<segment order="7" name="Type de facture" start="30" end="30" presence="O" type="A">
+<valeur valeur="A">Flux AMC</valeur>
+<valeur valeur="B">Flux B2 ou SESAM dégradé</valeur>
+<valeur valeur="D">DRE</valeur>
+<valeur valeur="F">FSE</valeur>
+<valeur valeur="P">Facture papier AMO ou AMO + AMC</valeur>
+<valeur valeur="C">Facture papier AMC</valeur>
+<valeur valeur="E">Rappel sur prestations</valeur>
+<valeur valeur="R">Reservé pour les échanges inter-centres de traitement - rejeté</valeur>
+<valeur valeur="L">Reservé pour les échanges inter-centres de traitement - liquide</valeur>
+</segment>
+<segment order="8" name="Date de facturation" start="31" end="36" presence="F" type="N"/>
+<segment order="9" name="Traitement effectué sur la part AMC" start="37" end="37" presence="F" type="A">
+<valeur valeur="N">Envoi de l'image décompte en noemie 1 suite à TP sur la part AMC</valeur>
+<valeur valeur="V">Orde de virement distinct pour la part AMO et le part AMC</valeur>
+<valeur valeur="C">Paiement coordonné (CMU, référent, noemie 3...)</valeur>
+<valeur valeur="E">Éclatement sur le poste</valeur>
+<valeur valeur="A">Éclatement par un OCT</valeur>
+<valeur valeur="F">Éclatement par un OCT</valeur>
+<valeur valeur=" ">Pas de traitement de la part AMC</valeur>
+</segment>
+<segment order="10" name="Nature d'assurance" start="38" end="39" presence="F" type="A"/>
+<segment pkey="O" order="11" name="Délimiteur fin d'entité" start="40" end="40" presence="O" type="A" valeur="@"/>
+</ligne>
+<ligne rang="2" name="103" description="Assuré et bénéficiaire">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="3" valeur="103" presence="O" type="N"/>
+<segment saveas="rang" order="2" name="Niveau de rupture" start="4" end="5" presence="O" type="N"/>
+<segment order="3" name="N° immatriculation" start="6" end="18" presence="O" type="A"/>
+<segment order="4" name="Clé du numéro d'immatriculation" start="19" end="20" presence="O" type="N"/>
+<segment order="5" name="Nom patronymique" start="21" end="45" presence="F" type="A"/>
+<segment order="6" name="Nom d'usage" start="46" end="70" presence="F" type="A"/>
+<segment order="7" name="Prénom" start="71" end="85" presence="F" type="A"/>
+<segment order="8" name="N° immatriculation individuel" start="86" end="98" presence="F" type="A"/>
+<segment order="9" name="Clé du numéro d'immatriculation individuel" start="99" end="100" presence="F" type="N"/>
+<segment order="10" name="Date de naissance" start="101" end="106" presence="O" type="N"/>
+<segment order="11" name="Rang de naissance" start="107" end="107" presence="O" type="N"/>
+<segment order="12" name="Nom" start="108" end="132" presence="F" type="A"/>
+<segment order="13" name="Prénom" start="133" end="147" presence="F" type="A"/>
+<segment order="14" name="Unité de gestion de rattachement" start="148" end="151" presence="F" type="N"/>
+<segment pkey="O" order="15" name="Délimiteur fin d'entité" start="152" end="152" presence="O" type="A" valeur="@"/>
+</ligne>
+<ligne rang="2" name="110" description="Assuré">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="3" valeur="110" presence="O" type="N"/>
+<segment saveas="rang" order="2" name="Niveau de rupture" start="4" end="5" presence="O" type="N"/>
+<segment order="3" name="Numéro de sécurité sociale" start="6" end="18" presence="O" type="A"/>
+<segment order="4" name="Clé du numéro de sécurité sociale" start="19" end="20" presence="O" type="N"/>
+<segment order="5" name="Nature du nom" start="21" end="21" presence="O" type="A">
+<valeur valeur="M">Marital</valeur>
+<valeur valeur="P">Patronymique</valeur>
+<valeur valeur="U">Usage</valeur>
+</segment>
+<segment order="6" name="Nom du bénéficiaire" start="22" end="46" presence="O" type="A"/>
+<segment order="7" name="Blanc" start="47" end="72" presence="O" type="A"/>
+<segment order="8" name="Prénom du bénéficiaire" start="73" end="87" presence="O" type="A"/>
+<segment pkey="O" order="9" name="Délimiteur fin d'entité" start="88" end="88" presence="O" type="A" valeur="@"/>
+</ligne>
+<ligne rang="2" name="120" description="Malade">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="3" valeur="120" presence="O" type="N"/>
+<segment saveas="rang" order="2" name="Niveau de rupture" start="4" end="5" presence="O" type="N"/>
+<segment order="3" name="Date de naissance du bénéficiaire" start="6" end="11" presence="O" type="N"/>
+<segment order="4" name="Rang du bénéficiaire" start="12" end="12" presence="O" type="A"/>
+<segment order="5" name="Nom du malade" start="13" end="37" presence="O" type="A"/>
+<segment order="6" name="Prénom du malade" start="38" end="52" presence="O" type="A"/>
+<segment order="7" name="Unité de gestion de rattachement" start="53" end="56" presence="O" type="A"/>
+<segment pkey="O" order="9" name="Délimiteur fin d'entité" start="57" end="57" presence="O" type="A" valeur="@"/>
+</ligne>
+<ligne rang="2" name="150" description="Nature d'assurance">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="3" valeur="150" presence="O" type="N"/>
+<segment saveas="rang" order="2" name="Niveau de rupture" start="4" end="5" presence="O" type="N"/>
+<segment order="3" name="Nature de l'assurance" start="6" end="7" presence="O" type="A">
+<valeur valeur="AS">Maladie</valeur>
+<valeur valeur="AT">Accident du travail</valeur>
+<valeur valeur="AM">Maternité</valeur>
+</segment>
+<segment pkey="O" order="4" name="Délimiteur fin d'entité" start="8" end="8" presence="O" type="A" valeur="@"/>
+</ligne>
+<ligne rang="2" name="160" description="Critère d'archivage">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="3" valeur="160" presence="O" type="N"/>
+<segment saveas="rang" order="2" name="Niveau de rupture" start="4" end="5" presence="O" type="N"/>
+<segment order="3" name="Numéro d'archivage" start="6" end="22" presence="O" type="N"/>
+<segment pkey="O" order="4" name="Délimiteur fin d'entité" start="23" end="23" presence="O" type="A" valeur="@"/>
+</ligne>
+<ligne rang="2" name="198" description="Part AMO">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="3" valeur="198" presence="O" type="N"/>
+<segment saveas="rang" order="2" name="Niveau de rupture" start="4" end="5" presence="O" type="N"/>
+<segment order="3" name="Montant AMO demandé" start="6" end="13" presence="O" type="N"/>
+<segment order="4" name="État paiement part AMO" start="14" end="14" presence="O" type="A">
+<valeur valeur="P">Payé</valeur>
+<valeur valeur="R">Rejeté</valeur>
+<valeur valeur="D">Differé</valeur>
+<valeur valeur=" ">Pas de traitement de cette part</valeur>
+</segment>
+<segment order="5" name="Montant AMO payé" start="15" end="22" presence="F" type="N"/>
+<segment order="6" name="Signe du montant AMO payé" start="23" end="23" presence="O" type="N">
+<valeur valeur="N">Négatif</valeur>
+<valeur valeur="P">Positif</valeur>
+</segment>
+<segment pkey="O" order="7" name="Délimiteur fin d'entité" start="24" end="24" presence="O" type="A" valeur="@"/>
+</ligne>
+<ligne rang="2" name="199" description="Part AMC">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="3" valeur="199" presence="O" type="N"/>
+<segment saveas="rang" order="2" name="Niveau de rupture" start="4" end="5" presence="O" type="N"/>
+<segment order="3" name="Montant AMC demandé" start="6" end="13" presence="O" type="N"/>
+<segment order="4" name="État paiement part AMC" start="14" end="14" presence="O" type="A">
+<valeur valeur="P">Payé</valeur>
+<valeur valeur="R">Rejeté</valeur>
+<valeur valeur="D">Differé</valeur>
+<valeur valeur=" ">Pas de traitement de cette part</valeur>
+</segment>
+<segment order="5" name="Montant AMC payé" start="15" end="22" presence="F" type="N"/>
+<segment order="6" name="Signe du montant AMC payé" start="23" end="23" presence="O" type="N">
+<valeur valeur="N">Négatif</valeur>
+<valeur valeur="P">Positif</valeur>
+</segment>
+<segment order="7" name="N° AMC destinataire" start="24" end="33" presence="O" type="N"/>
+<segment order="8" name="N° identification AMC de l'adhérent" start="34" end="48" presence="F" type="A"/>
+<segment pkey="O" order="9" name="Délimiteur fin d'entité" start="49" end="49" presence="O" type="A" valeur="@"/>
+</ligne>
+<ligne rang="2" name="210" description="Acte professionnel">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="3" valeur="210" presence="O" type="N"/>
+<segment saveas="rang" order="2" name="Niveau de rupture" start="4" end="5" presence="O" type="N"/>
+<segment order="3" name="N° de ligne" start="6" end="7" presence="O" type="N"/>
+<segment order="4" name="Code gestion technique pour régime" start="8" end="9" presence="O" type="N"/>
+<segment order="5" name="Justification pour exonération" start="10" end="10" presence="O" type="A"/>
+<segment order="6" name="Mode de traitement" start="11" end="12" presence="O" type="N"/>
+<segment order="7" name="Discipline médico-tarifaire" start="13" end="15" presence="O" type="N"/>
+<segment order="8" name="Date de prescription d'un acte" start="16" end="21" presence="O" type="N"/>
+<segment order="9" name="Date des soins ou date début" start="22" end="27" presence="O" type="N"/>
+<segment order="10" name="Date de fin de soins" start="28" end="33" presence="O" type="N"/>
+<segment order="11" name="Prix unitaire d'un acte" start="34" end="41" presence="O" type="N"/>
+<segment order="12" name="Base de remboursement d'un acte" start="42" end="49" presence="O" type="N"/>
+<segment order="13" name="Taux de remboursement" start="50" end="52" presence="O" type="N"/>
+<segment order="14" name="Montant remboursé" start="53" end="60" presence="O" type="N"/>
+<segment order="15" name="Signe de l'acte" start="61" end="61" presence="O" type="A">
+<valeur valeur="N">Négatif</valeur>
+<valeur valeur="P">Positif</valeur>
+</segment>
+<segment order="16" name="Nature de la prestation" start="62" end="64" presence="O" type="A"/>
+<segment order="17" name="Code complémentaire à la nature d'acte" start="65" end="66" presence="O" type="A">
+<valeur valeur="E">Examen, expertise</valeur>
+<valeur valeur="F">Majoration jour férié</valeur>
+<valeur valeur="N">Majoration de nuit</valeur>
+<valeur valeur="P">Présent</valeur>
+<valeur valeur="S">Sortie</valeur>
+<valeur valeur="T">Transfert</valeur>
+</segment>
+<segment order="18" name="Quantité d'actes" start="67" end="69" presence="O" type="N"/>
+<segment order="19" name="Coefficient de l'acte" start="70" end="74" presence="O" type="N"/>
+<segment order="20" name="Dénombrement des actes" start="75" end="77" presence="O" type="N"/>
+<segment order="21" name="Montant de la dépense" start="78" end="85" presence="O" type="N"/>
+<segment order="22" name="Qualificatif de la dépense" start="86" end="87" presence="O" type="A">
+<valeur valeur="AT">Tiers payant AT</valeur>
+<valeur valeur="DD">Dépassement non prescrit</valeur>
+<valeur valeur="DE">Dépassement exigence</valeur>
+<valeur valeur="DF">Dépassement Fortune</valeur>
+<valeur valeur="DP">Dépassement permanent</valeur>
+<valeur valeur="ED">Entente directe</valeur>
+<valeur valeur="GR">Gratuit</valeur>
+<valeur valeur="NR">Non remboursabe</valeur>
+<valeur valeur="S">Honoraire globalisés, suite</valeur>
+<valeur valeur="TM">Ticket modérateur seul</valeur>
+</segment>
+<segment order="23" name="Taux complémentaire Alsace/Moselle" start="88" end="90" presence="O" type="N"/>
+<segment order="24" name="Montant complémentaire Alsace/Moselle" start="91" end="98" presence="O" type="N"/>
+<segment order="25" name="Taux part complémentaire Mutuelle" start="99" end="101" presence="O" type="N"/>
+<segment order="26" name="Montant part complémentaire" start="102" end="109" presence="O" type="N"/>
+<segment order="27" name="Base remboursement Mutuelle" start="110" end="117" presence="O" type="N"/>
+<segment pkey="O" order="28" name="Délimiteur fin d'entité" start="118" end="118" presence="O" type="A" valeur="@"/>
+</ligne>
+<ligne rang="2" name="250" description="Mouvement financier - retenue">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="3" valeur="250" presence="O" type="N"/>
+<segment saveas="rang" order="2" name="Niveau de rupture" start="4" end="5" presence="O" type="N"/>
+<segment order="3" name="Numéro de ligne pour noemie" start="6" end="7" presence="O" type="N"/>
+<segment order="4" name="Référence de la dette" start="8" end="17" presence="O" type="A"/>
+<segment order="5" name="Date d'enregistrement de la dette" start="18" end="23" presence="O" type="N"/>
+<segment order="6" name="Nature de la dette" start="24" end="26" presence="O" type="A">
+<valeur valeur="ACC">Accompte sur prestations</valeur>
+<valeur valeur="AFF">Affranchissement</valeur>
+<valeur valeur="API">Acompte caisse centralisatrice des paiements</valeur>
+<valeur valeur="APR">Avance sur prestations</valeur>
+<valeur valeur="IEC">Indui suite à erreur comptable</valeur>
+<valeur valeur="IND">Indu sur prestations</valeur>
+<valeur valeur="IPH">Indu sur avance pharmacie</valeur>
+<valeur valeur="IPI">Créance non gérée par caisse gestionnaire</valeur>
+<valeur valeur="ISP">Impayé mandat ou virement solde</valeur>
+<valeur valeur="ODL">Opposition interne paiement en double</valeur>
+<valeur valeur="OID">Opposition interne diverse</valeur>
+<valeur valeur="REL">Reliquat</valeur>
+<valeur valeur="VMI">Virement ou mandat impayé</valeur>
+</segment>
+<segment order="7" name="Nature des opérations de récupération" start="27" end="29" presence="O" type="A">
+<valeur valeur="ANT">Annulation totale</valeur>
+<valeur valeur="CIN">Constat initial</valeur>
+<valeur valeur="LOP">Main levée d'opposition partielle</valeur>
+<valeur valeur="LOT">Main levée d'opposition totale</valeur>
+<valeur valeur="NVP">Admission en non valeur partielle</valeur>
+<valeur valeur="NVT">Admission en non valeur totale</valeur>
+<valeur valeur="PAI">Paiement</valeur>
+<valeur valeur="PPR">Passage en profit</valeur>
+<valeur valeur="RAS">Remboursement à l'assuré</valeur>
+<valeur valeur="RDP">Remise de dette partielle</valeur>
+<valeur valeur="RDS">Remise de dette &lt; seuil</valeur>
+<valeur valeur="RDT">Remise de dette totale</valeur>
+<valeur valeur="REL">Rectification d'un élement signalétique</valeur>
+<valeur valeur="RMO">Rectification d'un montant</valeur>
+<valeur valeur="RPR">Retenue sur prestation</valeur>
+</segment>
+<segment order="8" name="Montant du mouvement financier" start="30" end="37" presence="O" type="N"/>
+<segment order="9" name="Signe de l'acte" start="38" end="38" presence="O" type="A">
+<valeur valeur="N">Négatif</valeur>
+<valeur valeur="P">Positif</valeur>
+</segment>
+<segment order="10" name="Montant du solde d'une dette" start="39" end="46" presence="F" type="N"/>
+<segment pkey="O" order="11" name="Délimiteur fin d'entité" start="47" end="47" presence="O" type="A" valeur="@"/>
+</ligne>
+<ligne rang="2" name="261" description="Paiements ponctuels ou forfaitaires">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="3" valeur="261" presence="O" type="N"/>
+<segment saveas="rang" order="2" name="Niveau de rupture" start="4" end="5" presence="O" type="N"/>
+<segment order="3" name="Code paiement ponctuel ou forfaitaire" start="6" end="10" presence="O" type="N"/>
+<segment order="4" name="Montant paiment ponctuel ou forfaitaire" start="11" end="18" presence="O" type="N"/>
+<segment pkey="O" order="5" name="Délimiteur fin d'entité" start="19" end="19" presence="O" type="A" valeur="@"/>
+</ligne>
+<ligne rang="2" name="262" description="Détail paiement ponctuel ou forfaitaire">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="3" valeur="262" presence="O" type="N"/>
+<segment saveas="rang" order="2" name="Niveau de rupture" start="4" end="5" presence="O" type="N"/>
+<segment order="3" name="Codification" start="6" end="10" presence="F" type="A"/>
+<segment order="4" name="Libellé associé" start="11" end="90" presence="F" type="A"/>
+<segment order="5" name="N° d'immatriculation" start="91" end="103" presence="F" type="A"/>
+<segment order="6" name="Clé du numéro d'immatriculation" start="104" end="105" presence="F" type="N"/>
+<segment order="7" name="Date de naissance" start="106" end="111" presence="F" type="N"/>
+<segment order="8" name="Rang de naissance" start="112" end="112" presence="F" type="N"/>
+<segment order="9" name="Période" start="113" end="113" presence="O" type="A">
+<valeur valeur="H">Hebdo</valeur>
+<valeur valeur="M">Mensuel</valeur>
+<valeur valeur="T">Trimestriel</valeur>
+<valeur valeur="S">Semestriel</valeur>
+<valeur valeur="A">Annuel</valeur>
+<valeur valeur="P">Ponctuel</valeur>
+</segment>
+<segment order="10" name="Date début période" start="114" end="119" presence="F" type="N"/>
+<segment order="11" name="Date fin période" start="120" end="125" presence="F" type="N"/>
+<segment order="12" name="Montant" start="126" end="133" presence="O" type="N"/>
+<segment pkey="O" order="13" name="Délimiteur fin d'entité" start="134" end="134" presence="O" type="A" valeur="@"/>
+</ligne>
+<ligne rang="2" name="290" description="Rejet ou signalement">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="3" valeur="290" presence="O" type="N"/>
+<segment saveas="rang" order="2" name="Niveau de rupture" start="4" end="5" presence="O" type="N"/>
+<segment order="3" name="N° de ligne" start="6" end="7" presence="O" type="N"/>
+<segment order="4" name="Codification" start="8" end="17" presence="O" type="A"/>
+<segment order="5" name="Libellé" start="18" end="97" presence="O" type="A"/>
+<segment pkey="O" order="7" name="Délimiteur fin d'entité" start="98" end="98" presence="O" type="A" valeur="@"/>
+</ligne>
+<ligne rang="2" name="294" description="Ligne rejet">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="3" valeur="294" presence="O" type="N"/>
+<segment saveas="rang" order="2" name="Niveau de rupture" start="4" end="5" presence="O" type="N"/>
+<segment order="3" name="Codification du rejet" start="6" end="9" presence="O" type="A"/>
+<segment order="4" name="Libellé du rejet" start="10" end="95" presence="O" type="A"/>
+<segment order="5" name="Niveau de rejet" start="96" end="96" presence="O" type="A">
+<valeur valeur="F">Facture</valeur>
+<valeur valeur="L">Ligne de prestation</valeur>
+<valeur valeur="A">Code affiné</valeur>
+</segment>
+<segment order="6" name="Part concerné" start="97" end="97" presence="O" type="A">
+<valeur valeur="O">Part obligatoire ou part obligatoire + complémentaire</valeur>
+<valeur valeur="C">Part complémentaire</valeur>
+</segment>
+<segment order="7" name="Nature de prestation concernée" start="98" end="102" presence="F" type="A"/>
+<segment order="8" name="Date des soins" start="103" end="108" presence="F" type="N"/>
+<segment order="9" name="N° exécutant" start="109" end="117" presence="F" type="N"/>
+<segment order="10" name="N° de ligne" start="118" end="120" presence="F" type="N"/>
+<segment order="11" name="Rang du rejet" start="121" end="122" presence="F" type="N"/>
+<segment order="12" name="Information complémentaire sur le rejet" start="123" end="152" presence="F" type="A"/>
+<segment pkey="O" order="13" name="Délimiteur fin d'entité" start="153" end="153" presence="O" type="A" valeur="@"/>
+</ligne>
+<ligne rang="2" name="295" description="Ligne commentaire">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="3" valeur="295" presence="O" type="N"/>
+<segment saveas="rang" order="2" name="Niveau de rupture" start="4" end="5" presence="O" type="N"/>
+<segment order="3" name="Code commentaire" start="6" end="6" presence="F" type="A"/>
+<segment order="4" name="Commentaire" start="7" end="134" presence="O" type="A"/>
+<segment pkey="O" order="5" name="Délimiteur fin d'entité" start="135" end="135" presence="O" type="A" valeur="@"/>
+</ligne>
+<ligne rang="2" name="990" description="Entité de contrôle">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="3" valeur="990" presence="O" type="N"/>
+<segment saveas="rang" order="2" name="Niveau de rupture" start="4" end="5" valeur="99" presence="O" type="N"/>
+<segment order="3" name="Identification du niveau de rupture" start="6" end="22" presence="F" type="A"/>
+<segment order="4" name="Compteur du niveau inférieur dans la hierarchie" start="23" end="30" presence="O" type="N"/>
+<segment order="5" name="Cumul des montants de niveau inférieur" start="31" end="41" presence="O" type="N"/>
+<segment order="6" name="Signe de l'acte" start="42" end="42" presence="O" type="A">
+<valeur valeur="N">Négatif</valeur>
+<valeur valeur="P">Positif</valeur>
+</segment>
+<segment pkey="O" order="7" name="Délimiteur fin d'entité" start="43" end="43" presence="O" type="A" valeur="@"/>
+</ligne>
+<ligne rang="1" name="999" description="Fin de fichier">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="3" valeur="999" presence="O" type="N"/>
+<segment order="2" name="Type d'émetteur" start="4" end="5" presence="O" type="A">
+<valeur valeur="AN">ASSEMBLEE NATIONALE</valeur>
+<valeur valeur="BF">BANQUE DE FRANCE</valeur>
+<valeur valeur="CC">CAISSE DES CULTES</valeur>
+<valeur valeur="CE">CAISSE DE RETRAITE ET DE PREVOYANCE DES CLERCS ET EMPLOYES DE NOTAIRES (CRPCEN)</valeur>
+<valeur valeur="CF">SNCF</valeur>
+<valeur valeur="CI">CHAMBRE DE COMMERCE ET D’INDUSTRIE DE PARIS</valeur>
+<valeur valeur="CM">CAISSE NATIONALE MILITAIRE DE SECURITE SOCIALE (CNMSS)</valeur>
+<valeur valeur="CP">C.P.A.M.</valeur>
+<valeur valeur="CR">C.R.A.M.</valeur>
+<valeur valeur="CS">Centre de Service Complémentaire (AMC)</valeur>
+<valeur valeur="CT">CENTRE DE TRAITEMENT INFORMATIQUE (Régime Général)</valeur>
+<valeur valeur="EN">ETABLISSEMENT NATIONAL DES INVALIDES DE LA MARINE (ENIM)</valeur>
+<valeur valeur="MA">MSA</valeur>
+<valeur valeur="OC">Organisme Complémentaire (AMC)</valeur>
+<valeur valeur="OT">ORGANISME CONCENTRATEUR TECHNIQUE (OCT)</valeur>
+<valeur valeur="PB">PORT AUTONOME DE BORDEAUX</valeur>
+<valeur valeur="RM">SECURITE SOCIALE MINIERE</valeur>
+<valeur valeur="RP">R.A.T.P.</valeur>
+<valeur valeur="SE">CAISSES AUTONOMES DE SECURITE SOCIALE DU SENAT</valeur>
+<valeur valeur="SI">AUTRES EMETTEURS (Sociétés civiles professionnelles...)</valeur>
+<valeur valeur="SM">SECTION DES MUTUELLES NATIONALES</valeur>
+<valeur valeur="SR">CENTRE INFORMATIQUE REGIONAL (AMPI)</valeur>
+<valeur valeur="TE">ETABLISSEMENTS</valeur>
+<valeur valeur="TP">AUTRES PARTENAIRES DE SANTE</valeur>
+</segment>
+<segment order="3" name="Numéro d'émetteur" start="6" end="19" presence="O" type="N"/>
+<segment order="4" name="Programme émetteur" start="20" end="25" presence="F" type="A"/>
+<segment order="5" name="Type de destinataire" start="26" end="27" presence="O" type="A">
+<valeur valeur="AN">ASSEMBLEE NATIONALE</valeur>
+<valeur valeur="BF">BANQUE DE FRANCE</valeur>
+<valeur valeur="CC">CAISSE DES CULTES</valeur>
+<valeur valeur="CE">CAISSE DE RETRAITE ET DE PREVOYANCE DES CLERCS ET EMPLOYES DE NOTAIRES (CRPCEN)</valeur>
+<valeur valeur="CF">SNCF</valeur>
+<valeur valeur="CI">CHAMBRE DE COMMERCE ET D’INDUSTRIE DE PARIS</valeur>
+<valeur valeur="CM">CAISSE NATIONALE MILITAIRE DE SECURITE SOCIALE (CNMSS)</valeur>
+<valeur valeur="CP">C.P.A.M.</valeur>
+<valeur valeur="CR">C.R.A.M.</valeur>
+<valeur valeur="CS">Centre de Service Complémentaire (AMC)</valeur>
+<valeur valeur="CT">CENTRE DE TRAITEMENT INFORMATIQUE (Régime Général)</valeur>
+<valeur valeur="EN">ETABLISSEMENT NATIONAL DES INVALIDES DE LA MARINE (ENIM)</valeur>
+<valeur valeur="MA">MSA</valeur>
+<valeur valeur="OC">Organisme Complémentaire (AMC)</valeur>
+<valeur valeur="OT">ORGANISME CONCENTRATEUR TECHNIQUE (OCT)</valeur>
+<valeur valeur="PB">PORT AUTONOME DE BORDEAUX</valeur>
+<valeur valeur="RM">SECURITE SOCIALE MINIERE</valeur>
+<valeur valeur="RP">R.A.T.P.</valeur>
+<valeur valeur="SE">CAISSES AUTONOMES DE SECURITE SOCIALE DU SENAT</valeur>
+<valeur valeur="SI">AUTRES EMETTEURS (Sociétés civiles professionnelles...)</valeur>
+<valeur valeur="SM">SECTION DES MUTUELLES NATIONALES</valeur>
+<valeur valeur="SR">CENTRE INFORMATIQUE REGIONAL (AMPI)</valeur>
+<valeur valeur="TE">ETABLISSEMENTS</valeur>
+<valeur valeur="TP">AUTRES PARTENAIRES DE SANTE</valeur>
+</segment>
+<segment order="6" name="Numéro de destinataire" start="28" end="41" presence="O" type="A"/>
+<segment order="7" name="Programme destinataire" start="42" end="47" presence="F" type="A"/>
+<segment order="8" name="Application-type d'échange" start="48" end="49" presence="F" type="A"/>
+<segment order="9" name="Identification du fichier" start="50" end="55" presence="O" type="A"/>
+<segment order="10" name="Nombre d'enregistrements" start="56" end="63" presence="O" type="N"/>
+<segment order="11" name="Type de flux" start="64" end="64" presence="F" type="A">
+<valeur valeur=" ">Réel</valeur>
+<valeur valeur="R">Réel</valeur>
+<valeur valeur="T">Test</valeur>
+<valeur valeur="D">Démo</valeur>
+</segment>
+<segment order="12" name="Blanc" start="65" end="82" presence="F" type="A"/>
+<segment order="13" name="Nombre de lots" start="83" end="85" presence="O" type="N"/>
+<segment order="14" name="Cumul des montants du fichier" start="86" end="96" presence="O" type="N"/>
+<segment order="15" name="Signe du montant du fichier" start="97" end="97" presence="O" type="A">
+<valeur valeur="N">Négatif</valeur>
+<valeur valeur="P">Positif</valeur>
+</segment>
+<segment order="16" name="Cumul des montants du fichier dans l'autre monnaie" start="98" end="108" presence="F" type="N"/>
+<segment order="17" name="Blanc" start="109" end="128" presence="F" type="A"/>
+</ligne>
+</file>

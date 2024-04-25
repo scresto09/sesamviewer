@@ -1,0 +1,10 @@
+encoding: UTF-8
+src/main.c
+src/main_window.c
+src/b2.c
+src/support.c
+src/open_window.c
+src/error.c
+src/about_window.c
+src/detail_window.c
+src/error_window.c

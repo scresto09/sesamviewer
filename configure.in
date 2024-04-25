@@ -1,0 +1,68 @@
+dnl configure.in
+dnl
+dnl Copyright (C) 2007 Sylvain Cresto <scresto@gmail.com>
+
+AC_INIT(configure.in)
+AC_CONFIG_HEADER(config.h)
+
+PACKAGE=sesam_viewer
+VERSION=0.5.1
+
+AM_INIT_AUTOMAKE([$PACKAGE], [$VERSION])
+
+AC_PROG_INTLTOOL(0.22)
+AC_ISC_POSIX
+AC_PROG_CC
+AC_HEADER_STDC
+AC_FUNC_MMAP
+AC_CANONICAL_HOST
+
+dnl prerequis pour gtk
+pkg_modules="gtk+-2.0 >= 2.6.0 glib-2.0 >= 2.6.0 libglade-2.0 >= 2.5.0 libxml-2.0 >= 2.6.0"
+PKG_CHECK_MODULES(PACKAGE, [$pkg_modules])
+AC_SUBST(PACKAGE_CFLAGS)
+AC_SUBST(PACKAGE_LIBS)
+
+AC_MSG_CHECKING(for debug mode request)
+if test "A$enable_debug" = "Ayes"; then
+ 	AC_MSG_RESULT(yes)
+	echo "***"
+	echo "*** DEBUG MODE enabled on command line"
+	echo "***"
+	AC_DEFINE(DEBUG,1,[Define for debug support])
+else
+ 	AC_MSG_RESULT(no)
+fi
+
+ALL_LINGUAS=""
+
+AM_GLIB_GNU_GETTEXT
+GETTEXT_PACKAGE=[$PACKAGE]
+AC_SUBST(GETTEXT_PACKAGE)
+AC_DEFINE_UNQUOTED([GETTEXT_PACKAGE],["$GETTEXT_PACKAGE"],[gettext domain])
+
+if test "A$enable_debug" = "A"; then
+	enable_debug=no
+	CFLAGS="-Wall"
+else
+	CFLAGS="-Wall -g"
+fi
+
+dnl Ecriture des fichiers
+AC_OUTPUT([ Makefile po/Makefile.in src/Makefile glade/Makefile data/Makefile ])
+
+echo "
+Configuration for $PACKAGE $VERSION :
+-------------------------------------
+
+  Host System Type ................ : $host
+  Compiler ........................ : $CC $CPPFLAGS
+  Linker .......................... : $CC $LDFLAGS $LIBS
+  GTK+ version .................... : `pkg-config --modversion gtk+-2.0`
+  GLIB version .................... : `pkg-config --modversion glib-2.0`
+  libxml2 version ................. : `pkg-config --modversion libxml-2.0`
+  Debug mode ...................... : $enable_debug
+
+  Now type 'make' to build $PACKAGE $VERSION,
+  and then type 'make install' for installation.
+"

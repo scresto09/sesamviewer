@@ -1,0 +1,28 @@
+This file is part of sesam viewer
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+18-16-2007 - 0.5.1
+  + correction d'un petit bug, affichage d'un message d'erreur lorsque le
+    fichier main.glade est introuvable.
+
+28-11-2007 - 0.5
+  + ajout affichage détaillé du fichier
+  + ajout possibilité d'ouvrir plusieurs fenêtres
+
+11-06-2007 - 0.4
+  + ajout support fichier "noemie"
+  + divers corrections
+
+22-05-2007 - 0.3
+  + ajout fenêtre "propriétés" (taille/position de la fenêtre,
+    affichage des segments en arborescence, remplacer les caractères
+    non imprimables)
+
+17-05-2007 - 0.2
+  + affichage des types de segment en arborescence, ajout attribut
+    "rang" aux tags <ligne> dans b2.xml
+  * correction sur l'utilisation de la boite de dialogue d'ouverture de
+    fichier

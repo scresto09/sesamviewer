@@ -1,0 +1,935 @@
+<?xml version="1.0"?>
+<file>
+<ligne rang="1" name="Type 0" description="Début de fichier">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="3" valeur="000" presence="O" type="N"/>
+<segment order="2" name="Type d'émetteur" start="4" end="5" presence="O" type="A">
+<valeur valeur="TP">Partenaire de santé autre qu'établissement</valeur>
+<valeur valeur="TE">Partenaire de santé: établissement ou soins</valeur>
+<valeur valeur="SI">Autres émetteurs (ex: sociétés civiles professionnelles, sociétés civiles de moyens, etc...)</valeur>
+<valeur valeur="OT">Transmission entre un OCT et l'organisme d'assurance maladie</valeur>
+</segment>
+<segment order="3" name="Numéro d'émetteur" start="6" end="19" presence="O" type="N"/>
+<segment order="4" name="blanc" start="20" end="25" presence="O" type="A"/>
+<segment order="5" name="Type de destinataire" start="26" end="27" presence="O" type="A"/>
+<segment order="6" name="N° de destinataire" start="28" end="41" presence="O" type="A"/>
+<segment order="7" name="Date de réception du flux sur le frontal" start="42" end="47" type="N" presence="O"/>
+<segment order="8" name="Application" start="48" end="49" type="A" presence="O"/>
+<segment order="9" name="Identification du fichier" start="50" end="55" type="A" presence="O"/>
+<segment order="10" name="Date de création du fichier" start="56" end="61" type="N" presence="O"/>
+<segment order="11" name="Norme" start="62" end="65" type="A" presence="O" saveas="norme"/>
+<segment order="12" name="Version de la norme" start="66" end="67" type="A" valeur="B2" presence="O"/>
+<segment order="13" name="blanc" start="68" end="68" type="A" presence="O"/>
+<segment order="14" name="blanc" start="69" end="69" type="A" presence="O"/>
+<segment order="15" name="zone reservée SESAM" start="70" end="72" type="A" presence="O"/>
+<segment order="16" name="blanc" start="73" end="82" type="A" presence="O"/>
+<segment order="17" name="Longueur d'enregistrement" start="83" end="85" type="N" presence="O"/>
+<segment order="18" name="blanc" start="86" end="91" type="A" presence="O"/>
+<segment order="19" name="Zone message" start="92" end="128" type="F" presence="O"/>
+</ligne>
+<ligne rang="2" name="Type 1" description="Début de lot">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="1" valeur="1" presence="O" type="N"/>
+<segment order="2" name="N° partenaire de santé + clé" start="2" end="10" valeur="" presence="O" type="N"/>
+<segment order="3" name="Origine du fichier" start="11" end="16" valeur="" presence="FO" type="A"/>
+<segment order="4" name="N° d'organisme destinataire" start="17" end="19" valeur="" presence="O" type="N"/>
+<segment order="5" name="N° de lot" start="20" end="22" valeur="" presence="O" type="N"/>
+<segment order="6" name="Catégorie" start="23" end="25" valeur="" presence="F" type="A"/>
+<segment order="7" name="Statut juridique" start="26" end="27" valeur="" presence="F" type="A"/>
+<segment order="8" name="Mode de fixation des tarifs" start="28" end="29" valeur="" presence="F" type="A"/>
+<segment order="9" name="Nom ou raison sociale du partenaire de santé" start="30" end="69" valeur="" presence="O" type="A"/>
+<segment order="10" name="Version de la norme utilisée" start="70" end="71" valeur="" presence="O" type="A"/>
+<segment order="11" name="Date de création du lot" start="72" end="77" valeur="" presence="O" type="N"/>
+<segment order="12" name="blanc" start="78" end="78" valeur="" presence="O" type="A"/>
+<segment order="13" name="Code norme" start="79" end="80" valeur="" presence="O" type="A"/>
+<segment order="14" name="Top certification du lot" start="81" end="81" presence="F" type="A">
+<valeur valeur=" ">B2 non sécurisée, non chiffrée</valeur>
+<valeur valeur="S">SESAM avec Vitale, sécurisée, chiffrée</valeur>
+<valeur valeur="F">SESAM sans Vitale, sécurisée, chiffrée</valeur>
+<valeur valeur="D">SESAM dégradé, chiffré avec CPS, sans vitale</valeur>
+</segment>
+<segment order="15" name="Numéro de version de norme" start="82" end="87" presence="O" type="N"/>
+<segment order="16" name="Unité monétaire de facturation" start="88" end="88" presence="F" type="A">
+<valeur valeur=" ">Franc</valeur>
+<valeur valeur="E">Euro</valeur>
+<valeur valeur="U">Unique (Euro)</valeur>
+</segment>
+<segment order="17" name="Grand régime de la caisse pivot" start="89" end="90" valeur="" presence="F" type="A"/>
+<segment order="18" name="N° de la caisse pivot" start="91" end="93" valeur="" presence="F" type="A"/>
+<segment order="19" name="Indication de dispositif Caisse Centralisatrice des Paiements" start="94" end="94" valeur="" presence="F" type="A"/>
+<segment order="20" name="blanc" start="95" end="128" presence="O" type="A"/>
+</ligne>
+<ligne rang="3" name="Type 2" description="Début facture">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="1" valeur="2" presence="O" type="N"/>
+<segment order="2" name="N° du partenaire santé" start="2" end="10" valeur="" presence="O" type="N"/>
+<segment order="3" name="blanc" start="11" end="11" valeur="" presence="F" type="A"/>
+<segment order="4" name="N° immatriculation assuré" start="12" end="24" valeur="" presence="O" type="A"/>
+<segment order="5" name="Clé du N° immatriculation" start="25" end="26" valeur="" presence="O" type="N"/>
+<segment order="6" name="N° facture" start="27" end="35" valeur="" presence="O" type="N"/>
+<segment order="7" name="Complément du type" start="36" end="36" valeur="" presence="F" type="A"/>
+<segment order="8" name="Marquage de la facture" start="37" end="37" valeur="" presence="F" type="A"/>
+<segment order="9" name="Indicateur de forçage de la tarification de la part AMO" start="38" end="38" valeur="" presence="F" type="A"/>
+<segment order="10" name="Nature d'opération" start="39" end="39" valeur="" presence="O" type="N"/>
+<segment order="11" name="Date de facturation" start="40" end="45" valeur="" presence="O" type="N"/>
+<segment order="12" name="Top éclatement des flux par le PS" start="46" end="46" valeur="" presence="F" type="A">
+<valeur valeur="E">éclatement du flux SESAM Vitale par le PS, avec génération d'une DRE</valeur>
+<valeur valeur="F">éclatement du flux par le PS, hors SESAM Vitale</valeur>
+</segment>
+<segment order="13" name="Type de facture" start="47" end="47" valeur="" presence="F" type="A">
+<valeur valeur=" ">Hors SESAM</valeur>
+<valeur valeur="F">SESAM ou SESAM dégradé</valeur>
+</segment>
+<segment order="14" name="Facture établie sur un dispositif portable" start="48" end="48" valeur="" presence="F" type="A"/>
+<segment order="15" name="Code Grand Régime" start="49" end="50" valeur="" presence="O" type="N"/>
+<segment order="16" name="N° Caisse gestionnaire" start="51" end="53" valeur="" presence="O" type="N"/>
+<segment order="17" name="N° Centre gestionnaire" start="54" end="57" valeur="" presence="O" type="N"/>
+<segment order="18" name="Nature de la pièce justificative des droits" start="58" end="58" valeur="" presence="O" type="N"/>
+<segment order="19" name="N° prescripteur + clé" start="59" end="67" valeur="" presence="O" type="N"/>
+<segment order="20" name="Date de prescription" start="68" end="73" valeur="" presence="O" type="N"/>
+<segment order="21" name="Régime de prestation de l'assuré" start="74" end="76" valeur="" presence="F" type="A"/>
+<segment order="22" name="Nature d'assurance" start="77" end="78" valeur="" presence="O" type="N">
+<valeur valeur="10">maladie</valeur>
+<valeur valeur="13">maladie régime local (Alsace - Moselle)</valeur>
+<valeur valeur="30">maternité</valeur>
+<valeur valeur="41">accident du travail</valeur>
+<valeur valeur="90">prévention maladie</valeur>
+</segment>
+<segment order="23" name="Justification d'exonération ou de modulation du ticket modérateur" start="79" end="79" valeur="" presence="O" type="A"/>
+<segment order="24" name="Date Maternité" start="80" end="85" valeur="" presence="F" type="N"/>
+<segment order="25" name="Numéro accident du travail ou date d'accident de droit commun" start="86" end="94" valeur="" presence="F" type="N"/>
+<segment order="26" name="Présence d'une CPS de remplaçant pour sécurisation de la facture" start="95" end="95" valeur="" presence="O" type="N"/>
+<segment order="27" name="Date de naissance du bénéficiaire" start="96" end="101" valeur="" presence="O" type="A"/>
+<segment order="28" name="Rang de naissance" start="102" end="102" valeur="" presence="F" type="N"/>
+<segment order="29" name="Rang de bénéficiaire" start="103" end="104" valeur="" presence="F" type="A"/>
+<segment order="30" name="N° d'adhérent" start="105" end="112" valeur="" presence="F" type="A"/>
+<segment order="31" name="Spécialité de prescripteur" start="113" end="114" valeur="" presence="F" type="N"/>
+<segment order="32" name="Destinataire du règlement" start="115" end="116" valeur="" presence="O" type="N">
+<valeur valeur="00">Hors Tiers Payant : règlement à l'assuré</valeur>
+<valeur valeur="05">Tiers Payant sur la part obligatoire seule (y compris le cas d'exonération du Ticket Modérateur): règlement au partenaire de santé</valeur>
+<valeur valeur="15">Tiers Payant Intégral (part RO+RC) : règlement au partenaire de santé</valeur>
+<valeur valeur="25">Tiers Payant sur la part complémentaire seule : règlement au partenaire de santé</valeur>
+<valeur valeur="10">Réservé Régime Général pour les soins AT en consultation externe</valeur>
+<valeur valeur="06">Tiers payant intégral : cas des seuls PS exerçant pour le compte des règimes SNCF ou Mines</valeur>
+</segment>
+<segment order="33" name="Type de contrat souscrit auprès d'un organisme complémentaire" start="117" end="118" valeur="" presence="F" type="N">
+<valeur valeur="85">sortants du dispositif CMUC (géré par un organisme obligatoire)</valeur>
+<valeur valeur="87">sortants du dispositif CMUC (géré par un organisme complémentaire)</valeur>
+<valeur valeur="88">aide à la mutualisation (panier de bien = panier CMUC)</valeur>
+<valeur valeur="89">bénéficiaire de la CMU complémentaire (en cours), quel que soit le gestionnaire</valeur>
+<valeur valeur="99">le PS transmet la FSE vers un OCT, et autorise celui-ci à pratiquer un éclatement du flux</valeur>
+</segment>
+<segment order="34" name="N° d'organisme complémentaire" start="119" end="128" valeur="" presence="F" type="A"/>
+</ligne>
+<ligne rang="3" name="Type 2" description="Début facture (norme CP - Etablissements publics et privés)">
+<segment pkey="O" name="norme" type="V" valeur="CP  "/>
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="1" valeur="2" presence="O" type="N"/>
+<segment order="2" name="N° du partenaire santé" start="2" end="10" valeur="" presence="O" type="N"/>
+<segment order="3" name="blanc" start="11" end="11" valeur="" presence="F" type="A"/>
+<segment order="4" name="N° immatriculation assuré" start="12" end="24" valeur="" presence="O" type="A"/>
+<segment order="5" name="Clé du N° immatriculation" start="25" end="26" valeur="" presence="O" type="N"/>
+<segment order="6" name="Rang du bénéficiaire" start="27" end="29" valeur="" presence="O" type="N"/>
+<segment order="7" name="N° facture" start="30" end="38" valeur="" presence="O" type="N"/>
+<segment order="8" name="Nature d'opération" start="39" end="39" valeur="" presence="O" type="N"/>
+<segment order="9" name="N° d'entrée" start="40" end="48" valeur="" presence="F" type="A"/>
+<segment order="10" name="Code Grand Régime" start="49" end="50" valeur="" presence="O" type="N"/>
+<segment order="11" name="N° Caisse gestionnaire" start="51" end="53" valeur="" presence="O" type="N"/>
+<segment order="12" name="N° Centre gestionnaire" start="54" end="57" valeur="" presence="O" type="N"/>
+<segment order="13" name="Nature de la pièce justificative des droits" start="58" end="58" valeur="" presence="O" type="N"/>
+<segment order="14" name="Prise en charge établie le" start="59" end="64" valeur="" presence="F" type="N"/>
+<segment order="15" name="Attestation de droits, carte Vitale ou prise en charge valable à compter du" start="65" end="70" valeur="" presence="F" type="N"/>
+<segment order="16" name="Délivrée par" start="71" end="73" valeur="" presence="F" type="N"/>
+<segment order="16" name="Régime de prestation de l'assuré" start="74" end="76" valeur="" presence="F" type="A"/>
+<segment order="17" name="Nature d'assurance" start="77" end="78" valeur="" presence="O" type="N">
+<valeur valeur="10">maladie</valeur>
+<valeur valeur="13">maladie régime local (Alsace - Moselle)</valeur>
+<valeur valeur="30">maternité</valeur>
+<valeur valeur="41">accident du travail</valeur>
+<valeur valeur="90">prévention maladie</valeur>
+</segment>
+<segment order="23" name="Justification d'exonération ou de modulation du ticket modérateur" start="79" end="79" valeur="" presence="O" type="A"/>
+<segment order="24" name="Date Maternité" start="80" end="85" valeur="" presence="F" type="N"/>
+<segment order="25" name="Numéro accident du travail ou date d'accident de droit commun" start="86" end="94" valeur="" presence="F" type="N"/>
+<segment order="26" name="Présence d'une CPS de remplaçant pour sécurisation de la facture" start="95" end="95" valeur="" presence="O" type="N"/>
+<segment order="27" name="Date de naissance du bénéficiaire" start="96" end="101" valeur="" presence="O" type="A"/>
+<segment order="28" name="Rang de naissance" start="102" end="102" valeur="" presence="F" type="N"/>
+<segment order="29" name="Date d'entrée" start="103" end="108" valeur="" presence="O" type="N"/>
+<segment order="30" name="Date de sortie" start="109" end="114" valeur="" presence="O" type="N"/>
+<segment order="31" name="Heure de sortie" start="115" end="116" valeur="" presence="O" type="N"/>
+<segment order="33" name="Type de contrat souscrit auprès d'un organisme complémentaire" start="117" end="118" valeur="" presence="F" type="N">
+<valeur valeur="85">sortants du dispositif CMUC (géré par un organisme obligatoire)</valeur>
+<valeur valeur="87">sortants du dispositif CMUC (géré par un organisme complémentaire)</valeur>
+<valeur valeur="88">aide à la mutualisation (panier de bien = panier CMUC)</valeur>
+<valeur valeur="89">bénéficiaire de la CMU complémentaire (en cours), quel que soit le gestionnaire</valeur>
+<valeur valeur="99">le PS transmet la FSE vers un OCT, et autorise celui-ci à pratiquer un éclatement du flux</valeur>
+</segment>
+<segment order="34" name="N° d'organisme complémentaire" start="119" end="128" valeur="" presence="F" type="A"/>
+</ligne>
+<ligne rang="3" name="Type 2S" description="Suite de l'en-tête de la facture">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="1" valeur="2" presence="O" type="N"/>
+<segment order="2" name="N° du partenaire santé" start="2" end="10" valeur="" presence="O" type="N"/>
+<segment order="3" name="blanc" start="11" end="11" valeur="" presence="F" type="A"/>
+<segment order="4" name="N° immatriculation assuré" start="12" end="24" valeur="" presence="O" type="A"/>
+<segment order="5" name="Clé du N° immatriculation" start="25" end="26" valeur="" presence="O" type="N"/>
+<segment order="6" name="N° facture" start="27" end="35" valeur="" presence="O" type="N"/>
+<segment pkey="O" order="7" name="Complément du type" start="36" end="36" valeur="S" presence="F" type="A"/>
+<segment order="8" name="Blanc" start="37" end="49" valeur="" presence="F" type="A"/>
+<segment order="9" name="N° immatriculation individuel" start="50" end="62" valeur="" presence="F" type="A"/>
+<segment order="10" name="Clé du N° immatriculation" start="63" end="64" valeur="" presence="F" type="N"/>
+<segment order="11" name="Référence de la liste d'opposition" start="65" end="70" valeur="" presence="F" type="N"/>
+<segment order="12" name="Blanc" start="71" end="128" valeur="" presence="F" type="N"/>
+</ligne>
+<ligne rang="3" name="Type 2S" description="Suite de l'en-tête de la facture (norme CP - Etablissements publics et privés)">
+<segment pkey="O" name="norme" type="V" valeur="CP  "/>
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="1" valeur="2" presence="O" type="N"/>
+<segment order="2" name="N° du partenaire santé" start="2" end="10" valeur="" presence="O" type="N"/>
+<segment order="3" name="blanc" start="11" end="11" valeur="" presence="F" type="A"/>
+<segment order="4" name="N° immatriculation assuré" start="12" end="24" valeur="" presence="O" type="A"/>
+<segment order="5" name="Clé du N° immatriculation" start="25" end="26" valeur="" presence="O" type="N"/>
+<segment order="6" name="Rang du bénéficiaire" start="27" end="29" valeur="" presence="O" type="N"/>
+<segment order="7" name="N° facture" start="30" end="38" valeur="" presence="O" type="N"/>
+<segment pkey="O" order="8" name="Complément du type" start="39" end="39" valeur="S" presence="O" type="A"/>
+<segment order="9" name="Séquence" start="40" end="41" valeur="" presence="O" type="A"/>
+<segment order="10" name="Complément au numéro de titre de recette" start="42" end="47" valeur="" presence="F" type="N"/>
+<segment order="11" name="Destinataire du réglement" start="48" end="49" valeur="" presence="F" type="N"/>
+<segment order="12" name="N° immatriculation individuel" start="50" end="62" valeur="" presence="F" type="A"/>
+<segment order="13" name="Clé du N° immatriculation" start="63" end="64" valeur="" presence="F" type="N"/>
+<segment order="14" name="Blanc" start="65" end="128" valeur="" presence="F" type="N"/>
+</ligne>
+<ligne rang="3" name="Type 2M" description="Suite de l'en-tête de la facture">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="1" valeur="2" presence="O" type="N"/>
+<segment order="2" name="N° du partenaire santé" start="2" end="10" valeur="" presence="O" type="N"/>
+1;3D
+<segment order="3" name="blanc" start="11" end="11" valeur="" presence="F" type="A"/>
+<segment order="4" name="N° immatriculation assuré" start="12" end="24" valeur="" presence="O" type="A"/>
+<segment order="5" name="Clé du N° immatriculation" start="25" end="26" valeur="" presence="O" type="N"/>
+<segment order="6" name="N° facture" start="27" end="35" valeur="" presence="O" type="N"/>
+<segment pkey="O" order="7" name="Complément du type" start="36" end="36" valeur="M" presence="O" type="A"/>
+<segment order="8" name="N° d'organisme complémentaire" start="37" end="46" valeur="" presence="F" type="N"/>
+<segment order="9" name="Code routage destinataire AMC" start="47" end="48" valeur="" presence="F" type="A"/>
+<segment order="10" name="Identifiant de l'hôte destinataire AMC" start="49" end="51" valeur="" presence="F" type="A"/>
+<segment order="11" name="Blanc" start="52" end="71" valeur="" presence="F" type="A"/>
+<segment order="12" name="Identifiant AMC fourni par l'organisme complémentaire" start="72" end="86" valeur="" presence="F" type="N"/>
+<segment order="13" name="Blanc" start="87" end="93" valeur="" presence="F" type="A"/>
+<segment order="14" name="Code forçage de la tarification de la part AMC" start="94" end="94" valeur="" presence="F" type="A">
+<valeur valeur=" ">Pas de forçage</valeur>
+</segment>
+<segment order="15" name="Type du module STS" start="95" end="95" valeur="" presence="F" type="A">
+<valeur valeur="R">Régime AMO</valeur>
+<valeur valeur="U">CMU</valeur>
+<valeur valeur="M">FMF / FNMF</valeur>
+<valeur valeur="8">CTIP</valeur>
+<valeur valeur="4">FFSA</valeur>
+</segment>
+<segment order="16" name="N° de version du module STS" start="96" end="99" valeur="" presence="F" type="A"/>
+<segment order="17" name="Code routage AMC" start="100" end="101" valeur="" presence="F" type="A"/>
+<segment order="18" name="Identifiant hôte AMC" start="102" end="104" valeur="" presence="F" type="A"/>
+<segment order="19" name="Nom de domaine" start="105" end="124" valeur="" presence="F" type="A"/>
+<segment order="20" name="Indicateur de traitement" start="125" end="126" valeur="" presence="F" type="A"/>
+<segment order="21" name="Code application AMC" start="127" end="128" valeur="" presence="F" type="A"/>
+</ligne>
+<ligne rang="3" name="Type 2P" description="Suite de l'en-tête de la facture">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="1" valeur="2" presence="O" type="N"/>
+<segment order="2" name="N° du partenaire santé" start="2" end="10" valeur="" presence="O" type="N"/>
+<segment order="3" name="blanc" start="11" end="11" valeur="" presence="F" type="A"/>
+<segment order="4" name="N° immatriculation assuré" start="12" end="24" valeur="" presence="O" type="A"/>
+<segment order="5" name="Clé du N° immatriculation" start="25" end="26" valeur="" presence="O" type="N"/>
+<segment order="6" name="N° facture" start="27" end="35" valeur="" presence="O" type="N"/>
+<segment pkey="O" order="7" name="Complément du type" start="36" end="36" valeur="P" presence="F" type="A"/>
+<segment order="8" name="N° d'opérateur de règlement" start="37" end="46" valeur="" presence="F" type="A"/>
+<segment order="9" name="Contexte conventionnel AMC" start="47" end="80" valeur="" presence="F" type="A"/>
+<segment order="10" name="Blanc" start="81" end="128" valeur="" presence="F" type="A"/>
+</ligne>
+<ligne rang="3" name="Type 2B" description="Suite de l'en-tête de la facture">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="1" valeur="2" presence="O" type="N"/>
+<segment order="2" name="N° du partenaire santé" start="2" end="10" valeur="" presence="O" type="N"/>
+<segment order="3" name="blanc" start="11" end="11" valeur="" presence="F" type="A"/>
+<segment order="4" name="N° immatriculation assuré" start="12" end="24" valeur="" presence="O" type="A"/>
+<segment order="5" name="Clé du N° immatriculation" start="25" end="26" valeur="" presence="O" type="N"/>
+<segment order="6" name="N° facture" start="27" end="35" valeur="" presence="O" type="N"/>
+<segment pkey="O" order="7" name="Complément du type" start="36" end="36" valeur="B" presence="O" type="A"/>
+<segment order="8" name="Blanc" start="37" end="37" valeur="" presence="O" type="A"/>
+<segment order="9" name="Qualité du bénéficiaire" start="38" end="39" valeur="" presence="O" type="A">
+<valeur valeur="A">Assuré</valeur>
+<valeur valeur="C">Conjoint, concubin</valeur>
+<valeur valeur="E">Enfant</valeur>
+<valeur valeur="AA">Autre bénéficiaire</valeur>
+</segment>
+<segment order="10" name="Code civilité" start="40" end="42" valeur="" presence="O" type="A"/>
+<segment order="11" name="Nom du bénéficiaire" start="43" end="67" valeur="" presence="O" type="A"/>
+<segment order="12" name="Prénom" start="68" end="82" valeur="" presence="O" type="A"/>
+<segment order="13" name="N° de la voie" start="83" end="86" valeur="" presence="F" type="N"/>
+<segment order="14" name="Complément N° voie" start="87" end="87" valeur="" presence="F" type="A"/>
+<segment order="15" name="Type de voie" start="88" end="91" valeur="" presence="F" type="A"/>
+<segment order="16" name="Libellé de la voie" start="92" end="116" valeur="" presence="F" type="A"/>
+<segment order="17" name="Blanc" start="117" end="128" valeur="" presence="O" type="A"/>
+</ligne>
+<ligne name="Type 2C" description="Suite de l'en-tête de la facture">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="1" valeur="2" presence="O" type="N"/>
+<segment order="2" name="N° du partenaire santé" start="2" end="10" valeur="" presence="O" type="N"/>
+<segment order="3" name="blanc" start="11" end="11" valeur="" presence="F" type="A"/>
+<segment order="4" name="N° immatriculation assuré" start="12" end="24" valeur="" presence="O" type="A"/>
+<segment order="5" name="Clé du N° immatriculation" start="25" end="26" valeur="" presence="O" type="N"/>
+<segment order="6" name="N° facture" start="27" end="35" valeur="" presence="O" type="N"/>
+<segment pkey="O" order="7" name="Complément du type" start="36" end="36" valeur="C" presence="F" type="A"/>
+<segment order="8" name="Blanc" start="37" end="40" valeur="" presence="O" type="A"/>
+<segment order="9" name="Complément d'adresse" start="41" end="65" valeur="" presence="F" type="A"/>
+<segment order="10" name="Commune résidence" start="66" end="90" valeur="" presence="O" type="A"/>
+<segment order="11" name="Code postal" start="91" end="95" valeur="" presence="O" type="A"/>
+<segment order="12" name="Nom de l'assuré" start="96" end="120" valeur="" presence="F" type="A"/>
+<segment order="13" name="Prénom de l'assuré" start="121" end="128" valeur="" presence="F" type="A"/>
+</ligne>
+<ligne rang="3" name="Type 3" description="Ligne de facture/prestations hospitalières">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="1" valeur="3" presence="O" type="N"/>
+<segment order="2" name="N° du partenaire santé" start="2" end="10" valeur="" presence="O" type="N"/>
+<segment order="3" name="blanc" start="11" end="11" valeur="" presence="F" type="A"/>
+<segment order="4" name="N° immatriculation assuré" start="12" end="24" valeur="" presence="O" type="A"/>
+<segment order="5" name="Clé du N° immatriculation" start="25" end="26" valeur="" presence="O" type="N"/>
+<segment order="6" name="Rang de bénéficiaire" start="27" end="29" valeur="" presence="O" type="N"/>
+<segment order="7" name="N° facture" start="30" end="38" valeur="" presence="O" type="N"/>
+<segment order="8" name="Mode de traitement" start="39" end="40" valeur="" presence="F" type="N"/>
+<segment order="9" name="Discipline de prestations" start="41" end="43" valeur="" presence="F" type="N"/>
+<segment order="10" name="Date début de séjour" start="44" end="49" valeur="" presence="O" type="N"/>
+<segment order="11" name="Date fin de séjour" start="50" end="55" valeur="" presence="O" type="N"/>
+<segment order="12" name="Code acte" start="56" end="60" valeur="" presence="O" type="A"/>
+<segment order="13" name="Quantités d'actes" start="61" end="63" valeur="" presence="O" type="N"/>
+<segment order="14" name="Justification d'exonération du Ticket Modérateur au niveau de l'acte" start="64" end="64" valeur="" presence="F" type="A"/>
+<segment order="15" name="Coefficient" start="65" end="69" valeur="" presence="F" type="N"/>
+<segment order="16" name="Code prise en charge du forfait journalier" start="70" end="70" valeur="" presence="F" type="A">
+<valeur valeur="A">À la charge du malade</valeur>
+<valeur valeur="R">À la charge du régime obligatoire</valeur>
+<valeur valeur="L">À la charge du régime Alsace-Moselle</valeur>
+</segment>
+<segment order="17" name="Coefficient MCO ou HAD" start="71" end="75" valeur="" presence="F" type="N"/>
+<segment order="18" name="Prix unitaire" start="76" end="82" valeur="" presence="O" type="N"/>
+<segment order="19" name="Base de remboursement" start="83" end="90" valeur="" presence="O" type="N"/>
+<segment order="20" name="Taux applicable à la prestation" start="91" end="93" valeur="" presence="O" type="N"/>
+<segment order="21" name="Montant remboursable par la caisse" start="94" end="101" valeur="" presence="O" type="N"/>
+<segment order="22" name="Montant total de la dépense" start="102" end="109" valeur="" presence="O" type="N"/>
+<segment order="23" name="N° de GHS ou n° de GHT" start="110" end="113" valeur="" presence="F" type="N"/>
+<segment order="24" name="Taux de financement" start="114" end="116" valeur="" presence="F" type="N"/>
+<segment order="25" name="Blanc" start="117" end="119" valeur="" presence="F" type="A"/>
+<segment order="26" name="Qualificatif de la dépense" start="120" end="120" valeur="" presence="F" type="A"/>
+<segment order="27" name="Domaine court séjour" start="121" end="121" valeur="" presence="F" type="A"/>
+<segment order="28" name="Montant remboursable par l'organisme complémentaire" start="122" end="128" valeur="" presence="F" type="N"/>
+</ligne>
+<ligne rang="3" name="Type 3S" description="Suite ligne de facture/prestations hospitalières">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="1" valeur="3" presence="O" type="N"/>
+<segment order="2" name="N° du partenaire santé" start="2" end="10" valeur="" presence="O" type="N"/>
+<segment order="3" name="blanc" start="11" end="11" valeur="" presence="F" type="A"/>
+<segment order="4" name="N° immatriculation assuré" start="12" end="24" valeur="" presence="O" type="A"/>
+<segment order="5" name="Clé du N° immatriculation" start="25" end="26" valeur="" presence="O" type="N"/>
+<segment order="6" name="Rang de bénéficiaire" start="27" end="29" valeur="" presence="O" type="N"/>
+<segment order="7" name="N° facture" start="30" end="38" valeur="" presence="O" type="N"/>
+<segment pkey="O" order="8" name="Complément de type" start="39" end="39" valeur="S" presence="O" type="A"/>
+<segment order="9" name="Séquence" start="40" end="41" valeur="" presence="O" type="N"/>
+<segment order="10" name="N° Prescripteur" start="42" end="50" valeur="" presence="O" type="N"/>
+<segment order="11" name="Condition d'exercice du prescripteur" start="51" end="51" valeur="" presence="F" type="A">
+<valeur valeur="L">Libéral</valeur>
+<valeur valeur="S">Salarié</valeur>
+</segment>
+<segment order="12" name="Spécialité du prescripteur salarié" start="52" end="53" valeur="" presence="O" type="N"/>
+<segment order="13" name="Date de prescription" start="54" end="59" valeur="" presence="O" type="N"/>
+<segment order="14" name="Date de la demande d'accord préalable" start="60" end="65" valeur="" presence="F" type="N"/>
+<segment order="15" name="Code accord préalable" start="66" end="66" valeur="" presence="O" type="N">
+<valeur valeur="0">Pas de réponse de la caisse dans le délai réglementaire</valeur>
+<valeur valeur="4">Réponse favorable</valeur>
+<valeur valeur="5">Notion d'urgence</valeur>
+<valeur valeur="9">Acte non soumis à accord préalable</valeur>
+</segment>
+<segment order="16" name="Etablissement de Transfert ou de retour ou Lieu d'exécution de l'acte" start="67" end="80" valeur="" presence="F" type="N"/>
+<segment order="17" name="Nature d'interruption ou de fin de séjour" start="81" end="81" valeur="" presence="F" type="A">
+<valeur valeur="T">Transfert</valeur>
+<valeur valeur="R">Retour</valeur>
+<valeur valeur="E">Echange plateaux techniques</valeur>
+<valeur valeur="P">Présent</valeur>
+<valeur valeur="S">Sortie définitive</valeur>
+<valeur valeur="D">Décès</valeur>
+</segment>
+<segment order="18" name="Identification de la filière ou du réseau" start="82" end="95" valeur="" presence="F" type="N"/>
+<segment order="19" name="N° ordre du forfait technique" start="96" end="100" valeur="" presence="F" type="N"/>
+<segment order="20" name="N° de l'appareil" start="101" end="114" valeur="" presence="F" type="N"/>
+<segment order="21" name="Blanc" start="115" end="128" valeur="" presence="F" type="A"/>
+</ligne>
+<ligne rang="3" name="Type 3F" description="Détail des articles de la LPP">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="1" valeur="3" presence="O" type="N"/>
+<segment order="2" name="N° du partenaire santé" start="2" end="10" valeur="" presence="O" type="N"/>
+<segment order="3" name="blanc" start="11" end="11" valeur="" presence="F" type="A"/>
+<segment order="4" name="N° immatriculation assuré" start="12" end="24" valeur="" presence="O" type="A"/>
+<segment order="5" name="Clé du N° immatriculation" start="25" end="26" valeur="" presence="O" type="N"/>
+<segment order="6" name="N° facture" start="27" end="35" valeur="" presence="O" type="N"/>
+<segment pkey="O" order="7" name="Complément de type" start="36" end="36" valeur="F" presence="O" type="A"/>
+<segment order="8" name="Séquence" start="37" end="38" valeur="" presence="O" type="N"/>
+<segment order="9" name="Réservé SESAM" start="39" end="42" valeur="" presence="O" type="N"/>
+<segment order="10" name="Code référence LPP 1" start="43" end="55" valeur="" presence="O" type="A"/>
+<segment order="11" name="N° SIRET du fabricant ou de l'importateur" start="56" end="69" valeur="" presence="F" type="A"/>
+<segment order="12" name="Quantité 1" start="70" end="71" valeur="" presence="O" type="N"/>
+<segment order="13" name="Tarif référence LPP ou Prix Unitaire sur devis" start="72" end="78" valeur="" presence="O" type="N"/>
+<segment order="14" name="Montant total facturé" start="79" end="85" valeur="" presence="O" type="N"/>
+<segment order="15" name="Code référence LPP 2" start="86" end="98" valeur="" presence="F" type="A"/>
+<segment order="16" name="N° SIRET du fabricant ou de l'importateur" start="99" end="112" valeur="" presence="F" type="A"/>
+<segment order="17" name="Quantité 2" start="113" end="114" valeur="" presence="F" type="N"/>
+<segment order="18" name="Tarif référence LPP ou Prix Unitaire sur devis" start="115" end="121" valeur="" presence="F" type="N"/>
+<segment order="19" name="Montant total facturé" start="122" end="128" valeur="" presence="F" type="N"/>
+</ligne>
+<ligne rang="3" name="Type 3H" description="Détail des médicaments hospitaliers - TAA">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="1" valeur="3" presence="O" type="N"/>
+<segment order="2" name="N° du partenaire santé" start="2" end="10" valeur="" presence="O" type="N"/>
+<segment order="3" name="blanc" start="11" end="11" valeur="" presence="F" type="A"/>
+<segment order="4" name="N° immatriculation assuré" start="12" end="24" valeur="" presence="O" type="A"/>
+<segment order="5" name="Clé du N° immatriculation" start="25" end="26" valeur="" presence="O" type="N"/>
+<segment order="6" name="N° facture" start="27" end="35" valeur="" presence="O" type="N"/>
+<segment pkey="O" order="7" name="Complément de type" start="36" end="36" valeur="H" presence="O" type="A"/>
+<segment order="8" name="Séquence" start="37" end="38" valeur="" presence="O" type="N"/>
+<segment order="9" name="Réservé SESAM" start="39" end="42" valeur="" presence="O" type="N"/>
+<segment order="10" name="Blanc" start="43" end="48" valeur="" presence="O" type="A"/>
+<segment order="11" name="Code UCD ou CIP" start="49" end="55" valeur="" presence="O" type="N"/>
+<segment order="12" name="Code taux" start="56" end="56" valeur="" presence="O" type="N">
+<valeur valeur="2">Pharmacie allopathique à 35%</valeur>
+<valeur valeur="4">Pharmacie allopathique à 65%</valeur>
+<valeur valeur="5">Pharmacie allopathique à 100%</valeur>
+</segment>
+<segment order="13" name="Blanc" start="57" end="66" valeur="" presence="F" type="A"/>
+<segment order="14" name="Prix d'achat unitaire" start="67" end="73" valeur="" presence="F" type="N"/>
+<segment order="15" name="Montant de l'écart indémnisable" start="74" end="80" valeur="" presence="F" type="N"/>
+<segment order="16" name="Prix unitaire facturé" start="81" end="87" valeur="" presence="O" type="N"/>
+<segment order="17" name="Quantité" start="88" end="90" valeur="" presence="O" type="N"/>
+<segment order="18" name="Montant total facturé" start="91" end="97" valeur="" presence="O" type="N"/>
+<segment order="19" name="Blanc" start="98" end="128" valeur="" presence="O" type="A"/>
+</ligne>
+<ligne rang="3" name="Type 5" description="Totalisation de la facture">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="1" valeur="5" presence="O" type="N"/>
+<segment order="2" name="N° du partenaire santé" start="2" end="10" valeur="" presence="O" type="N"/>
+<segment order="3" name="blanc" start="11" end="11" valeur="" presence="F" type="A"/>
+<segment order="4" name="N° immatriculation assuré" start="12" end="24" valeur="" presence="O" type="A"/>
+<segment order="5" name="Clé du N° immatriculation" start="25" end="26" valeur="" presence="O" type="N"/>
+<segment order="6" name="N° facture" start="27" end="35" valeur="" presence="O" type="N"/>
+<segment order="7" name="Blanc" start="36" end="38" valeur="" presence="O" type="A"/>
+<segment order="8" name="Nombre d'enregistrement de Type 4" start="39" end="41" valeur="" presence="O" type="N"/>
+<segment order="9" name="Zone réservée SESAM" start="42" end="57" valeur="" presence="O" type="A"/>
+<segment order="10" name="Total des montants facturés" start="58" end="65" valeur="" presence="O" type="N"/>
+<segment order="11" name="Total remboursable par la Caisse" start="66" end="73" valeur="" presence="O" type="N"/>
+<segment order="12" name="Total participation assuré avant participation de l'organisme complémentaire" start="74" end="81" valeur="" presence="O" type="N"/>
+<segment order="13" name="Total remboursable par l'organisme complémentaire" start="82" end="89" valeur="" presence="F" type="N"/>
+<segment order="14" name="Top éclatement des flux par l'OCT" start="90" end="90" valeur="" presence="O" type="A">
+<valeur valeur="A">Il y a eu un éclatement du flux par un OCT</valeur>
+<valeur valeur=" ">Il n'y a pas eu d'éclatement ni de demande de remboursement AMC</valeur>
+</segment>
+<segment order="15" name="Zone réservée SESAM" start="91" end="93" valeur="" presence="O" type="A"/>
+<segment order="16" name="Liste d'opposition" start="94" end="94" valeur="" presence="O" type="A"/>
+<segment order="17" name="Blanc" start="95" end="96" valeur="" presence="O" type="A"/>
+<segment order="18" name="Zone de certification" start="97" end="128" valeur="" presence="O" type="A"/>
+</ligne>
+<ligne rang="3" name="Type 5" description="Totalisation de la facture (norme CP - Etablissements publics et privés)">
+<segment pkey="O" name="norme" type="V" valeur="CP  "/>
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="1" valeur="5" presence="O" type="N"/>
+<segment order="2" name="N° du partenaire santé" start="2" end="10" valeur="" presence="O" type="N"/>
+<segment order="3" name="blanc" start="11" end="11" valeur="" presence="F" type="A"/>
+<segment order="4" name="N° immatriculation assuré" start="12" end="24" valeur="" presence="O" type="A"/>
+<segment order="5" name="Clé du N° immatriculation" start="25" end="26" valeur="" presence="O" type="N"/>
+<segment order="6" name="Rang du bénéficiaire" start="27" end="29" valeur="" presence="F" type="N"/>
+<segment order="7" name="N° facture" start="30" end="38" valeur="" presence="O" type="N"/>
+<segment order="8" name="Nombre d'enregistrement de Type 3 et 4" start="39" end="41" valeur="" presence="O" type="N"/>
+<segment order="9" name="Total base de remboursement prestations hospitalières" start="42" end="49" valeur="" presence="O" type="N"/>
+<segment order="10" name="Total remboursable par la caisse pour les prestations hospitalières" start="50" end="57" valeur="" presence="O" type="N"/>
+<segment order="11" name="Total des honoraires facturés" start="58" end="65" valeur="" presence="O" type="N"/>
+<segment order="12" name="Total remboursable par la Caisse pour les honoraires" start="66" end="73" valeur="" presence="O" type="N"/>
+<segment order="13" name="Total participation assuré avant participation de l'organisme complémentaire" start="74" end="81" valeur="" presence="O" type="N"/>
+<segment order="14" name="Total remboursable par les organismes complémentaires pour les prestations hospitalières (enregistrements de type 3 CP)" start="82" end="89" valeur="" presence="F" type="N"/>
+<segment order="15" name="Total remboursable par les organismes complémentaires pour les honoraires (enregistrements de type 4 CP)" start="90" end="97" valeur="" presence="F" type="N"/>
+<segment order="16" name="Blanc" start="98" end="114" valeur="" presence="O" type="A"/>
+<segment order="17" name="Montant total facturé pour les prestations hospitalières" start="115" end="122" valeur="" presence="O" type="N"/>
+<segment order="18" name="Blanc" start="123" end="128" valeur="" presence="O" type="A"/>
+</ligne>
+<ligne rang="3" name="Type 4" description="Prestations réglées au partenaire de santé ou à l'assuré">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="1" valeur="4" presence="O" type="N"/>
+<segment order="2" name="N° partenaire de santé" start="2" end="10" valeur="" presence="O" type="N"/>
+<segment order="3" name="blanc" start="11" end="11" valeur="" presence="F" type="A"/>
+<segment order="4" name="N° immatriculation assuré" start="12" end="24" valeur="" presence="O" type="A"/>
+<segment order="5" name="Clé du N° immatriculation" start="25" end="26" valeur="" presence="O" type="N"/>
+<segment order="6" name="N° facture" start="27" end="35" valeur="" presence="O" type="N"/>
+<segment order="7" name="Complément de type" start="36" end="36" valeur="" presence="F" type="A"/>
+<segment order="8" name="Séquence" start="37" end="38" valeur="" presence="F" type="N"/>
+<segment order="9" name="Mode de traitement" start="39" end="40" valeur="" presence="F" type="N"/>
+<segment order="10" name="Discipline de prestations" start="41" end="43" valeur="" presence="F" type="N"/>
+<segment order="11" name="Date de la demande d'accord préalable ou date d'accord de prise en charge CMU" start="44" end="49" valeur="" presence="F" type="N"/>
+<segment order="12" name="Code accord préalable" start="50" end="50" valeur="" presence="O" type="N">
+<valeur valeur="0">Pas de réponse de la caisse dans le délai réglementaire</valeur>
+<valeur valeur="4">Réponse favorable</valeur>
+<valeur valeur="5">Notion d'urgence</valeur>
+<valeur valeur="9">Acte non soumis à accord préalable</valeur>
+</segment>
+<segment order="13" name="Séquence de renouvellement" start="51" end="52" valeur="" presence="F" type="A"/>
+<segment order="14" name="Blanc" start="53" end="53" valeur="" presence="F" type="A"/>
+<segment order="15" name="Justification d'exonération ou de modulation du ticket modérateur au niveau de l'acte" start="54" end="54" valeur="" presence="F" type="A"/>
+<segment order="16" name="N° exécutant + clé ayant effectué l'acte ou fourni le produit" start="55" end="63" valeur="" presence="O" type="N"/>
+<segment order="17" name="Zone tarif de l'exécutant" start="64" end="65" valeur="" presence="F" type="N"/>
+<segment order="18" name="Spécialité de l'exécutant" start="66" end="67" valeur="" presence="F" type="N"/>
+<segment order="19" name="Date de l'acte, de la délivrance du produit" start="68" end="73" valeur="" presence="O" type="N"/>
+<segment order="20" name="Code acte" start="74" end="78" valeur="" presence="O" type="A"/>
+<segment order="21" name="Quantités d'actes" start="79" end="80" valeur="" presence="O" type="N"/>
+<segment order="22" name="Coefficient" start="81" end="86" valeur="" presence="O" type="N"/>
+<segment order="23" name="Dénombrement" start="87" end="88" valeur="" presence="O" type="N"/>
+<segment order="24" name="Prix unitaire" start="89" end="95" valeur="" presence="O" type="N"/>
+<segment order="25" name="Base de remboursement" start="96" end="102" valeur="" presence="O" type="N"/>
+<segment order="26" name="Taux applicable à la prestation" start="103" end="105" valeur="" presence="O" type="N"/>
+<segment order="27" name="Montant remboursable par l'organisme d'Assurance Maladie" start="106" end="112" valeur="" presence="O" type="N"/>
+<segment order="28" name="Montant des honoraires ou de la dépense (dépassement compris ou après remise pour la norme FR)" start="113" end="119" valeur="" presence="O" type="N"/>
+<segment order="29" name="Qualificatif de la dépense" start="120" end="120" valeur="" presence="O" type="A"/>
+<segment order="30" name="Code lieu" start="121" end="121" valeur="" presence="O" type="N">
+<valeur valeur="0">Actes effectués au cabinet du partenaire de santé</valeur>
+<valeur valeur="1">Actes effectués au domicile du malade (ou transports)</valeur>
+</segment>
+<segment order="31" name="Montant remboursable par l'organisme complémentaire" start="122" end="128" valeur="" presence="F" type="N"/>
+</ligne>
+<ligne rang="3" name="Type 4" description="Honoraires réglés au praticien au mendataire des praticiens ou à la clinique s'il s'agit de soins externes en établissement public">
+<segment pkey="O" name="norme" type="V" valeur="CP  "/>
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="1" valeur="4" presence="O" type="N"/>
+<segment order="2" name="N° partenaire de santé" start="2" end="10" valeur="" presence="O" type="N"/>
+<segment order="3" name="blanc" start="11" end="11" valeur="" presence="F" type="A"/>
+<segment order="4" name="N° immatriculation assuré" start="12" end="24" valeur="" presence="O" type="A"/>
+<segment order="5" name="Clé du N° immatriculation" start="25" end="26" valeur="" presence="O" type="N"/>
+<segment order="6" name="Rang du bénéficiaire" start="27" end="29" valeur="" presence="F" type="N"/>
+<segment order="7" name="N° facture" start="30" end="38" valeur="" presence="O" type="N"/>
+<segment order="8" name="Mode de traitement" start="39" end="40" valeur="" presence="F" type="N"/>
+<segment order="9" name="Discipline de prestations" start="41" end="43" valeur="" presence="F" type="N"/>
+<segment order="10" name="N° de prescripteur + clé" start="44" end="52" valeur="" presence="O" type="N"/>
+<segment order="11" name="Blanc" start="53" end="53" valeur="" presence="F" type="N"/>
+<segment order="12" name="Justification d'exonération ou de modulation du ticket modérateur au niveau de l'acte" start="54" end="54" valeur="" presence="F" type="A"/>
+<segment order="13" name="Spécialité du prescripteur" start="55" end="56" presence="F" type="N"/>
+<segment order="14" name="N° exécutant + clé" start="57" end="65" valeur="" presence="O" type="N"/>
+<segment order="15" name="Zone tarif de l'exécutant" start="66" end="67" valeur="" presence="F" type="N"/>
+<segment order="16" name="Spécialité de l'exécutant" start="68" end="69" valeur="" presence="F" type="N"/>
+<segment order="17" name="Date des soins" start="70" end="75" valeur="" presence="O" type="N"/>
+<segment order="18" name="Code acte" start="76" end="80" valeur="" presence="O" type="A"/>
+<segment order="19" name="Quantité" start="81" end="82" valeur="" presence="O" type="N"/>
+<segment order="20" name="Coefficient" start="83" end="88" valeur="" presence="O" type="N"/>
+<segment order="21" name="Dénombrement" start="89" end="90" valeur="" presence="O" type="N"/>
+<segment order="22" name="Prix unitaire" start="91" end="97" valeur="" presence="O" type="N"/>
+<segment order="23" name="Base de remboursement" start="98" end="104" valeur="" presence="O" type="N"/>
+<segment order="24" name="Taux applicable à la prestation" start="105" end="107" valeur="" presence="O" type="N"/>
+<segment order="25" name="Montant remboursable par la Caisse" start="108" end="114" valeur="" presence="O" type="N"/>
+<segment order="26" name="Montant des honoraires (dépassement compris)" start="115" end="121" valeur="" presence="O" type="N"/>
+<segment order="27" name="Qualificatif de la dépense" start="122" end="122" valeur="" presence="F" type="A"/>
+<segment order="28" name="Montant remboursable par l'organisme complémentaire" start="123" end="128" valeur="" presence="F" type="N"/>
+</ligne>
+<ligne rang="3" name="Type 4S" description="Suite de l'entête de la facture">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="1" valeur="4" presence="O" type="N"/>
+<segment order="2" name="N° partenaire de santé" start="2" end="10" valeur="" presence="O" type="N"/>
+<segment order="3" name="blanc" start="11" end="11" valeur="" presence="F" type="A"/>
+<segment order="4" name="N° immatriculation assuré" start="12" end="24" valeur="" presence="O" type="A"/>
+<segment order="5" name="Clé du N° immatriculation" start="25" end="26" valeur="" presence="O" type="N"/>
+<segment order="6" name="N° facture" start="27" end="35" valeur="" presence="O" type="N"/>
+<segment pkey="O" order="7" name="Complément de type" start="36" end="36" valeur="S" presence="O" type="A"/>
+<segment order="8" name="Séquence" start="37" end="38" valeur="" presence="F" type="N"/>
+<segment order="9" name="Condition d'exercice de l'exécutant" start="39" end="39" valeur="" presence="F" type="A">
+<valeur valeur="L">Libéral</valeur>
+<valeur valeur="S">Salarié</valeur>
+</segment>
+<segment order="10" name="Blanc" start="40" end="40" valeur="" presence="F" type="A"/>
+<segment order="11" name="Base de remboursement théorique" start="41" end="47" valeur="" presence="F" type="N"/>
+<segment order="12" name="Blanc" start="48" end="48" valeur="" presence="F" type="A"/>
+<segment order="13" name="Date de la demande d'accord préalable" start="49" end="54" valeur="" presence="F" type="N"/>
+<segment order="14" name="Code accord préalable" start="55" end="55" valeur="" presence="O" type="N">
+<valeur valeur="0">Pas de réponse de la caisse dans le délai réglementaire</valeur>
+<valeur valeur="4">Réponse favorable</valeur>
+<valeur valeur="5">Notion d'urgence</valeur>
+<valeur valeur="9">Acte non soumis à accord préalable</valeur>
+</segment>
+<segment order="15" name="N° de remplaçant" start="56" end="64" valeur="" presence="F" type="A"/>
+<segment order="16" name="Complément au n° de remplaçant" start="65" end="70" valeur="" presence="F" type="A"/>
+<segment order="17" name="Indicateur de forçage de la tarification de la part AMO" start="71" end="71" valeur="" presence="F" type="A"/>
+<segment order="18" name="Lieu d'exécution de l'acte" start="72" end="85" valeur="" presence="F" type="N"/>
+<segment order="19" name="Identification de la filière ou du réseau" start="86" end="99" valeur="" presence="F" type="N"/>
+<segment order="20" name="Indicateur de forçage de la tarification de la part AMC" start="100" end="100" valeur="" presence="F" type="A"/>
+<segment order="21" name="N° d'ordre du forfait technique" start="101" end="105" valeur="" presence="F" type="N"/>
+<segment order="22" name="N° de l'appareil" start="106" end="119" valeur="" presence="F" type="N"/>
+<segment order="23" name="N° de GHS ou de GHT" start="120" end="123" valeur="" presence="F" type="N"/>
+<segment order="24" name="Domaine court séjour" start="124" end="124" valeur="" presence="F" type="N"/>
+<segment order="25" name="Blanc" start="125" end="128" valeur="" presence="F" type="A"/>
+</ligne>
+<ligne rang="3" name="Type 4B" description="Détail des actes de Biologie">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="1" valeur="4" presence="O" type="N"/>
+<segment order="2" name="N° partenaire de santé" start="2" end="10" valeur="" presence="O" type="N"/>
+<segment order="3" name="blanc" start="11" end="11" valeur="" presence="F" type="A"/>
+<segment order="4" name="N° immatriculation assuré" start="12" end="24" valeur="" presence="O" type="A"/>
+<segment order="5" name="Clé du N° immatriculation" start="25" end="26" valeur="" presence="O" type="N"/>
+<segment order="6" name="N° facture" start="27" end="35" valeur="" presence="O" type="N"/>
+<segment pkey="O" order="7" name="Complément de type" start="36" end="36" valeur="B" presence="O" type="A"/>
+<segment order="8" name="Séquence" start="37" end="38" valeur="" presence="F" type="N"/>
+<segment order="9" name="Réservé SESAM" start="39" end="42" valeur="" presence="F" type="A"/>
+<segment order="10" name="Blanc" start="43" end="48" valeur="" presence="O" type="A"/>
+<segment order="11" name="Date de l'acte" start="49" end="54" valeur="" presence="O" type="N"/>
+<segment order="12" name="Quantité" start="55" end="56" valeur="" presence="O" type="N"/>
+<segment order="13" name="Code acte 1" start="57" end="64" valeur="" presence="O" type="N"/>
+<segment order="14" name="Date de l'acte" start="65" end="70" valeur="" presence="F" type="N"/>
+<segment order="15" name="Quantité" start="71" end="72" valeur="" presence="F" type="N"/>
+<segment order="16" name="Code acte 2" start="73" end="80" valeur="" presence="F" type="N"/>
+<segment order="17" name="Date de l'acte" start="81" end="86" valeur="" presence="F" type="N"/>
+<segment order="18" name="Quantité" start="87" end="88" valeur="" presence="F" type="N"/>
+<segment order="19" name="Code acte 3" start="89" end="96" valeur="" presence="F" type="N"/>
+<segment order="20" name="Date de l'acte" start="97" end="102" valeur="" presence="F" type="N"/>
+<segment order="21" name="Quantité" start="103" end="104" valeur="" presence="F" type="N"/>
+<segment order="22" name="Code acte 4" start="105" end="112" valeur="" presence="F" type="N"/>
+<segment order="23" name="Date de l'acte" start="113" end="118" valeur="" presence="F" type="N"/>
+<segment order="24" name="Quantité" start="119" end="120" valeur="" presence="F" type="N"/>
+<segment order="25" name="Code acte 5" start="121" end="128" valeur="" presence="F" type="N"/>
+</ligne>
+<ligne rang="3" name="Type 4C" description="Détail des actes de Pharmacie">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="1" valeur="4" presence="O" type="N"/>
+<segment order="2" name="N° partenaire de santé" start="2" end="10" valeur="" presence="O" type="N"/>
+<segment order="3" name="blanc" start="11" end="11" valeur="" presence="F" type="A"/>
+<segment order="4" name="N° immatriculation assuré" start="12" end="24" valeur="" presence="O" type="A"/>
+<segment order="5" name="Clé du N° immatriculation" start="25" end="26" valeur="" presence="O" type="N"/>
+<segment order="6" name="N° facture" start="27" end="35" valeur="" presence="O" type="N"/>
+<segment pkey="O" order="7" name="Complément de type" start="36" end="36" valeur="C" presence="O" type="A"/>
+<segment order="8" name="Séquence" start="37" end="38" valeur="" presence="F" type="N"/>
+<segment order="9" name="Réservé SESAM" start="39" end="42" valeur="" presence="F" type="A"/>
+<segment order="10" name="Blanc" start="43" end="43" valeur="" presence="O" type="A"/>
+<segment order="11" name="Code CIP 1" start="44" end="50" valeur="" presence="O" type="N"/>
+<segment order="12" name="Prix unitaire" start="51" end="56" valeur="" presence="O" type="N"/>
+<segment order="13" name="Quantité" start="57" end="58" valeur="" presence="O" type="N"/>
+<segment order="14" name="Code taux / laboratoire" start="59" end="59" valeur="" presence="O" type="N">
+<valeur valeur="2">Pharamacie allopthique à 35%</valeur>
+<valeur valeur="4">Pharamacie allopthique à 65%</valeur>
+<valeur valeur="5">Pharamacie allopthique à 100%</valeur>
+<valeur valeur="6">Pharamacie allopthique, code laboratoire grand prix à 35%</valeur>
+<valeur valeur="7">Pharamacie allopthique, code laboratoire petit prix à 35%</valeur>
+<valeur valeur="9">Libre</valeur>
+</segment>
+<segment order="15" name="Indication de substitution" start="60" end="60" valeur="" presence="F" type="A">
+<valeur valeur="P">Le code est le médicament prescrit, non délivré, celui-ci à été substitué</valeur>
+<valeur valeur="D">Médicament effectivement délivré</valeur>
+<valeur valeur="M">Molécule, prescription en DCI</valeur>
+<valeur valeur="U">Substituion pour Urgence ou Accord du médecin</valeur>
+<valeur valeur="G">Substituion de Générique à Générique</valeur>
+</segment>
+<segment order="16" name="Code CIP 2" start="61" end="67" valeur="" presence="F" type="N"/>
+<segment order="17" name="Prix unitaire" start="68" end="73" valeur="" presence="F" type="N"/>
+<segment order="18" name="Quantité" start="74" end="75" valeur="" presence="F" type="N"/>
+<segment order="19" name="Code taux / laboratoire" start="76" end="76" valeur="" presence="F" type="N">
+<valeur valeur="2">Pharamacie allopthique à 35%</valeur>
+<valeur valeur="4">Pharamacie allopthique à 65%</valeur>
+<valeur valeur="5">Pharamacie allopthique à 100%</valeur>
+<valeur valeur="6">Pharamacie allopthique, code laboratoire grand prix à 35%</valeur>
+<valeur valeur="7">Pharamacie allopthique, code laboratoire petit prix à 35%</valeur>
+<valeur valeur="9">Libre</valeur>
+</segment>
+<segment order="20" name="Indication de substitution" start="77" end="77" valeur="" presence="F" type="A">
+<valeur valeur="P">Le code est le médicament prescrit, non délivré, celui-ci à été substitué</valeur>
+<valeur valeur="D">Médicament effectivement délivré</valeur>
+<valeur valeur="M">Molécule, prescription en DCI</valeur>
+<valeur valeur="U">Substituion pour Urgence ou Accord du médecin</valeur>
+<valeur valeur="G">Substituion de Générique à Générique</valeur>
+</segment>
+<segment order="21" name="Code CIP 3" start="78" end="84" valeur="" presence="F" type="N"/>
+<segment order="22" name="Prix unitaire" start="85" end="90" valeur="" presence="F" type="N"/>
+<segment order="23" name="Quantité" start="91" end="92" valeur="" presence="F" type="N"/>
+<segment order="24" name="Code taux / laboratoire" start="93" end="93" valeur="" presence="F" type="N">
+<valeur valeur="2">Pharamacie allopthique à 35%</valeur>
+<valeur valeur="4">Pharamacie allopthique à 65%</valeur>
+<valeur valeur="5">Pharamacie allopthique à 100%</valeur>
+<valeur valeur="6">Pharamacie allopthique, code laboratoire grand prix à 35%</valeur>
+<valeur valeur="7">Pharamacie allopthique, code laboratoire petit prix à 35%</valeur>
+<valeur valeur="9">Libre</valeur>
+</segment>
+<segment order="25" name="Indication de substitution" start="94" end="94" valeur="" presence="F" type="A">
+<valeur valeur="P">Le code est le médicament prescrit, non délivré, celui-ci à été substitué</valeur>
+<valeur valeur="D">Médicament effectivement délivré</valeur>
+<valeur valeur="M">Molécule, prescription en DCI</valeur>
+<valeur valeur="U">Substituion pour Urgence ou Accord du médecin</valeur>
+<valeur valeur="G">Substituion de Générique à Générique</valeur>
+</segment>
+<segment order="26" name="Code CIP 4" start="95" end="101" valeur="" presence="F" type="N"/>
+<segment order="27" name="Prix unitaire" start="102" end="107" valeur="" presence="F" type="N"/>
+<segment order="28" name="Quantité" start="108" end="109" valeur="" presence="F" type="N"/>
+<segment order="29" name="Code taux / laboratoire" start="110" end="110" valeur="" presence="F" type="N">
+<valeur valeur="2">Pharamacie allopthique à 35%</valeur>
+<valeur valeur="4">Pharamacie allopthique à 65%</valeur>
+<valeur valeur="5">Pharamacie allopthique à 100%</valeur>
+<valeur valeur="6">Pharamacie allopthique, code laboratoire grand prix à 35%</valeur>
+<valeur valeur="7">Pharamacie allopthique, code laboratoire petit prix à 35%</valeur>
+<valeur valeur="9">Libre</valeur>
+</segment>
+<segment order="30" name="Indication de substitution" start="111" end="111" valeur="" presence="F" type="A">
+<valeur valeur="P">Le code est le médicament prescrit, non délivré, celui-ci à été substitué</valeur>
+<valeur valeur="D">Médicament effectivement délivré</valeur>
+<valeur valeur="M">Molécule, prescription en DCI</valeur>
+<valeur valeur="U">Substituion pour Urgence ou Accord du médecin</valeur>
+<valeur valeur="G">Substituion de Générique à Générique</valeur>
+</segment>
+<segment order="31" name="Code CIP 5" start="112" end="118" valeur="" presence="F" type="N"/>
+<segment order="32" name="Prix unitaire" start="119" end="124" valeur="" presence="F" type="N"/>
+<segment order="33" name="Quantité" start="125" end="126" valeur="" presence="F" type="N"/>
+<segment order="34" name="Code taux / laboratoire" start="127" end="127" valeur="" presence="F" type="N">
+<valeur valeur="2">Pharamacie allopthique à 35%</valeur>
+<valeur valeur="4">Pharamacie allopthique à 65%</valeur>
+<valeur valeur="5">Pharamacie allopthique à 100%</valeur>
+<valeur valeur="6">Pharamacie allopthique, code laboratoire grand prix à 35%</valeur>
+<valeur valeur="7">Pharamacie allopthique, code laboratoire petit prix à 35%</valeur>
+<valeur valeur="9">Libre</valeur>
+</segment>
+<segment order="35" name="Indication de substitution" start="128" end="128" valeur="" presence="F" type="A">
+<valeur valeur="P">Le code est le médicament prescrit, non délivré, celui-ci à été substitué</valeur>
+<valeur valeur="D">Médicament effectivement délivré</valeur>
+<valeur valeur="M">Molécule, prescription en DCI</valeur>
+<valeur valeur="U">Substituion pour Urgence ou Accord du médecin</valeur>
+<valeur valeur="G">Substituion de Générique à Générique</valeur>
+</segment>
+</ligne>
+<ligne rang="3" name="Type 4D" description="Détail des actes">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="1" valeur="4" presence="O" type="N"/>
+<segment order="2" name="N° partenaire de santé" start="2" end="10" valeur="" presence="O" type="N"/>
+<segment order="3" name="blanc" start="11" end="11" valeur="" presence="F" type="A"/>
+<segment order="4" name="N° immatriculation assuré" start="12" end="24" valeur="" presence="O" type="A"/>
+<segment order="5" name="Clé du N° immatriculation" start="25" end="26" valeur="" presence="O" type="N"/>
+<segment order="6" name="N° facture" start="27" end="35" valeur="" presence="O" type="N"/>
+<segment pkey="O" order="7" name="Complément de type" start="36" end="36" valeur="D" presence="O" type="A"/>
+<segment order="8" name="Séquence" start="37" end="38" valeur="" presence="F" type="N"/>
+<segment order="9" name="Réservé SESAM" start="39" end="42" valeur="" presence="F" type="A"/>
+<segment order="10" name="Date de l'acte" start="43" end="48" valeur="" presence="O" type="N"/>
+<segment order="11" name="Quantité" start="49" end="50" valeur="" presence="I" type="N"/>
+<segment order="12" name="Code acte 1" start="51" end="63" valeur="" presence="I" type="A"/>
+<segment order="13" name="Coefficient modulateur" start="64" end="66" valeur="" presence="I" type="N"/>
+<segment order="14" name="N° de dent" start="67" end="68" valeur="" presence="O" type="N"/>
+<segment order="15" name="Date de l'acte" start="69" end="74" valeur="" presence="I" type="N"/>
+<segment order="16" name="Quantité" start="75" end="76" valeur="" presence="I" type="N"/>
+<segment order="17" name="Code acte 2" start="77" end="89" valeur="" presence="I" type="A"/>
+<segment order="18" name="Coefficient modulateur" start="90" end="92" valeur="" presence="I" type="N"/>
+<segment order="19" name="N° de dent" start="93" end="94" valeur="" presence="I" type="N"/>
+<segment order="20" name="Blanc" start="95" end="128" valeur="" presence="O" type="A"/>
+</ligne>
+<ligne rang="3" name="Type 4F" description="Détail des actes">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="1" valeur="4" presence="O" type="N"/>
+<segment order="2" name="N° partenaire de santé" start="2" end="10" valeur="" presence="O" type="N"/>
+<segment order="3" name="blanc" start="11" end="11" valeur="" presence="F" type="A"/>
+<segment order="4" name="N° immatriculation assuré" start="12" end="24" valeur="" presence="O" type="A"/>
+<segment order="5" name="Clé du N° immatriculation" start="25" end="26" valeur="" presence="O" type="N"/>
+<segment order="6" name="N° facture" start="27" end="35" valeur="" presence="O" type="N"/>
+<segment pkey="O" order="7" name="Complément de type" start="36" end="36" valeur="F" presence="O" type="A"/>
+<segment order="8" name="Séquence" start="37" end="38" valeur="" presence="O" type="N"/>
+<segment order="9" name="Réservé SESAM" start="39" end="42" valeur="" presence="F" type="A"/>
+<segment order="10" name="Code de la LPP" start="43" end="55" valeur="" presence="F" type="A"/>
+<segment order="11" name="Type de la prestation fournie" start="56" end="56" valeur="" presence="O" type="A">
+<valeur valeur="A">Achat</valeur>
+<valeur valeur="E">Entretien</valeur>
+<valeur valeur="L">Location</valeur>
+<valeur valeur="P">Frais de port</valeur>
+<valeur valeur="R">Réparation</valeur>
+<valeur valeur="S">Service</valeur>
+<valeur valeur="V">Livraison</valeur>
+</segment>
+<segment order="12" name="N° SIRET du fabricant ou de l'importateur" start="57" end="70" valeur="" presence="F" type="A"/>
+<segment order="13" name="Blanc" start="71" end="76" valeur="" presence="F" type="A"/>
+<segment order="14" name="Date début de location ou date date d'achat ou de délivrance" start="77" end="82" valeur="" presence="O" type="N"/>
+<segment order="15" name="Date de fin de location ou de service" start="83" end="88" valeur="" presence="F" type="N"/>
+<segment order="16" name="Tarif de référence LPP ou PU sur devis" start="89" end="95" valeur="" presence="O" type="N"/>
+<segment order="17" name="Nombre d'unités" start="96" end="97" valeur="" presence="O" type="N"/>
+<segment order="18" name="Prix unitaire de vente" start="98" end="104" valeur="" presence="O" type="N"/>
+<segment order="19" name="Base de remboursement LPP" start="105" end="111" valeur="" presence="O" type="N"/>
+<segment order="20" name="Montant total facturé" start="112" end="118" valeur="" presence="O" type="N"/>
+<segment order="21" name="Blanc" start="119" end="128" valeur="" presence="F" type="A"/>
+</ligne>
+<ligne rang="3" name="Type 4H" description="Détail des médicaments hospitaliers rétrocédés">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="1" valeur="4" presence="O" type="N"/>
+<segment order="2" name="N° partenaire de santé" start="2" end="10" valeur="" presence="O" type="N"/>
+<segment order="3" name="blanc" start="11" end="11" valeur="" presence="F" type="A"/>
+<segment order="4" name="N° immatriculation assuré" start="12" end="24" valeur="" presence="O" type="A"/>
+<segment order="5" name="Clé du N° immatriculation" start="25" end="26" valeur="" presence="O" type="N"/>
+<segment order="6" name="N° facture" start="27" end="35" valeur="" presence="O" type="N"/>
+<segment pkey="O" order="7" name="Complément de type" start="36" end="36" valeur="H" presence="O" type="A"/>
+<segment order="8" name="Séquence" start="37" end="38" valeur="" presence="O" type="N"/>
+<segment order="9" name="Réservé SESAM" start="39" end="42" valeur="" presence="F" type="A"/>
+<segment order="10" name="Blanc" start="43" end="48" valeur="" presence="O" type="A"/>
+<segment order="11" name="Code UCD ou CIP" start="49" end="55" valeur="" presence="O" type="N"/>
+<segment order="12" name="Code taux" start="56" end="56" valeur="" presence="O" type="N">
+<valeur valeur="2">Pharmacie allopathique à 35%</valeur>
+<valeur valeur="4">Pharmacie allopathique à 65%</valeur>
+<valeur valeur="5">Pharmacie allopathique à 100%</valeur>
+</segment>
+<segment order="13" name="Blanc" start="57" end="66" valeur="" presence="F" type="A"/>
+<segment order="14" name="Prix d'achat unitaire" start="67" end="73" valeur="" presence="F" type="N"/>
+<segment order="15" name="Montant de la marge" start="74" end="80" valeur="" presence="F" type="N"/>
+<segment order="16" name="Prix unitaire facturé" start="81" end="87" valeur="" presence="O" type="N"/>
+<segment order="17" name="Quantité" start="88" end="90" valeur="" presence="O" type="N"/>
+<segment order="18" name="Montant total facturé" start="91" end="97" valeur="" presence="O" type="N"/>
+<segment order="19" name="Blanc" start="98" end="128" valeur="" presence="F" type="A"/>
+</ligne>
+<ligne rang="3" name="Type 4M" description="Détail des actes CCAM">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="1" valeur="4" presence="O" type="N"/>
+<segment order="2" name="N° partenaire de santé" start="2" end="10" valeur="" presence="O" type="N"/>
+<segment order="3" name="blanc" start="11" end="11" valeur="" presence="F" type="A"/>
+<segment order="4" name="N° immatriculation assuré" start="12" end="24" valeur="" presence="O" type="A"/>
+<segment order="5" name="Clé du N° immatriculation" start="25" end="26" valeur="" presence="O" type="N"/>
+<segment order="6" name="N° facture" start="27" end="35" valeur="" presence="O" type="N"/>
+<segment pkey="O" order="7" name="Complément de type" start="36" end="36" valeur="M" presence="O" type="A"/>
+<segment order="8" name="Séquence" start="37" end="38" valeur="" presence="O" type="N"/>
+<segment order="9" name="Réservé SESAM" start="39" end="42" valeur="" presence="F" type="A"/>
+<segment order="10" name="Code de l'acte" start="43" end="55" valeur="" presence="O" type="A"/>
+<segment order="11" name="Code extension documentaire" start="56" end="56" valeur="" presence="F" type="A"/>
+<segment order="12" name="Code activité" start="57" end="57" valeur="" presence="O" type="A"/>
+<segment order="13" name="Code phase de traitement" start="58" end="58" valeur="" presence="F" type="N"/>
+<segment order="14" name="Code modificateur 1" start="59" end="59" valeur="" presence="F" type="A"/>
+<segment order="15" name="Code modificateur 2" start="60" end="60" valeur="" presence="F" type="A"/>
+<segment order="16" name="Code modificateur 3" start="61" end="61" valeur="" presence="F" type="A"/>
+<segment order="17" name="Code modificateur 4" start="62" end="62" valeur="" presence="F" type="A"/>
+<segment order="18" name="Code association d'actes non prévue" start="63" end="63" valeur="" presence="F" type="A">
+<valeur valeur="1">Même voie d'abord ou même technique ou même sextant</valeur>
+<valeur valeur="2">Voies d'abord différentes ou techniques différentes ou sextants différents</valeur>
+<valeur valeur="3">Association de plus de 4 actes pour tous les codes activités</valeur>
+<valeur valeur="4">Activité d'anesthésie</valeur>
+</segment>
+<segment order="19" name="Code remboursement exceptionnel" start="64" end="64" valeur="" presence="F" type="A">
+<valeur valeur="O">Oui</valeur>
+<valeur valeur="N">Non</valeur>
+</segment>
+<segment order="20" name="Date de chaque séance de le phase de traitement" start="65" end="70" valeur="" presence="F" type="N"/>
+<segment order="21" name="N° de la dent 1" start="71" end="72" valeur="" presence="F" type="A"/>
+<segment order="22" name="N° de la dent 2" start="73" end="74" valeur="" presence="F" type="A"/>
+<segment order="23" name="N° de la dent 3" start="75" end="76" valeur="" presence="F" type="A"/>
+<segment order="24" name="N° de la dent 4" start="77" end="78" valeur="" presence="F" type="A"/>
+<segment order="25" name="N° de la dent 5" start="79" end="80" valeur="" presence="F" type="A"/>
+<segment order="26" name="N° de la dent 6" start="81" end="82" valeur="" presence="F" type="A"/>
+<segment order="27" name="N° de la dent 7" start="83" end="84" valeur="" presence="F" type="A"/>
+<segment order="28" name="N° de la dent 8" start="85" end="86" valeur="" presence="F" type="A"/>
+<segment order="29" name="N° de la dent 9" start="87" end="88" valeur="" presence="F" type="A"/>
+<segment order="30" name="N° de la dent 10" start="89" end="90" valeur="" presence="F" type="A"/>
+<segment order="31" name="N° de la dent 11" start="91" end="92" valeur="" presence="F" type="A"/>
+<segment order="32" name="N° de la dent 12" start="93" end="94" valeur="" presence="F" type="A"/>
+<segment order="33" name="N° de la dent 13" start="95" end="96" valeur="" presence="F" type="A"/>
+<segment order="34" name="N° de la dent 14" start="97" end="98" valeur="" presence="F" type="A"/>
+<segment order="35" name="N° de la dent 15" start="99" end="100" valeur="" presence="F" type="A"/>
+<segment order="36" name="N° de la dent 16" start="101" end="102" valeur="" presence="F" type="A"/>
+<segment order="37" name="Supplément de charge" start="103" end="103" valeur="" presence="F" type="A">
+<valeur valeur="C">Supplément de charge pour activité en cabinet demandé</valeur>
+</segment>
+<segment order="38" name="Code modificateur OC 1" start="104" end="104" valeur="" presence="F" type="A"/>
+<segment order="39" name="Code modificateur OC 2" start="105" end="105" valeur="" presence="F" type="A"/>
+<segment order="40" name="Blanc" start="106" end="107" valeur="" presence="F" type="A"/>
+<segment order="41" name="Blanc" start="108" end="128" valeur="" presence="F" type="A"/>
+</ligne>
+<ligne rang="3" name="Type 4T" description="Complément facture globale">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="1" valeur="4" presence="O" type="N"/>
+<segment order="2" name="N° partenaire de santé" start="2" end="10" valeur="" presence="O" type="N"/>
+<segment order="3" name="blanc" start="11" end="11" valeur="" presence="F" type="A"/>
+<segment order="4" name="N° immatriculation assuré" start="12" end="24" valeur="" presence="O" type="A"/>
+<segment order="5" name="Clé du N° immatriculation" start="25" end="26" valeur="" presence="O" type="N"/>
+<segment order="6" name="N° facture" start="27" end="35" valeur="" presence="O" type="N"/>
+<segment pkey="O" order="7" name="Complément de type" start="36" end="36" valeur="T" presence="O" type="A"/>
+<segment order="8" name="Séquence" start="37" end="38" valeur="" presence="O" type="N"/>
+<segment order="9" name="Blanc" start="39" end="45" valeur="" presence="O" type="A"/>
+<segment order="10" name="Série" start="46" end="46" valeur="" presence="O" type="N">
+<valeur valeur="0">Non</valeur>
+<valeur valeur="1">Oui</valeur>
+</segment>
+<segment order="11" name="Transport lié à une hospitalisation" start="47" end="47" valeur="" presence="O" type="N">
+<valeur valeur="0">Non</valeur>
+<valeur valeur="1">Entrée/sortie</valeur>
+<valeur valeur="2">Transfert</valeur>
+</segment>
+<segment order="12" name="Longue distance" start="48" end="48" valeur="" presence="O" type="N">
+<valeur valeur="0">Pas de longue distance</valeur>
+<valeur valeur="1">Longue distance</valeur>
+</segment>
+<segment order="13" name="Blanc" start="49" end="49" valeur="" presence="O" type="A"/>
+<segment order="14" name="Forfait type de forfait" start="50" end="50" valeur="" presence="O" type="N">
+<valeur valeur="0">Pas de forfait</valeur>
+<valeur valeur="1">Département</valeur>
+<valeur valeur="2">Agglomération</valeur>
+<valeur valeur="3">Spécifique région parisienne</valeur>
+</segment>
+<segment order="15" name="Prix unitaire du forfait non majoré" start="51" end="56" valeur="" presence="F" type="N"/>
+<segment order="16" name="Quantité forfaits" start="57" end="58" valeur="" presence="F" type="N"/>
+<segment order="17" name="Quantité forfaits majoration de nuit" start="59" end="60" valeur="" presence="F" type="N"/>
+<segment order="18" name="Quantité forfaits majoration dimanche ou fériés" start="61" end="62" valeur="" presence="F" type="N"/>
+<segment order="19" name="Prix unitaire du kilomètre non réduit" start="63" end="68" valeur="" presence="F" type="N"/>
+<segment order="20" name="Sans majoration: Quantité &lt;= 150 km" start="69" end="72" valeur="" presence="F" type="N"/>
+<segment order="21" name="Sans majoration: Quantité &gt; 150 km" start="73" end="76" valeur="" presence="F" type="N"/>
+<segment order="22" name="Majoration nuit: Quantité &lt;= 150 km" start="77" end="80" valeur="" presence="F" type="N"/>
+<segment order="23" name="Majoration nuit: Quantité &gt; 150 km" start="81" end="84" valeur="" presence="F" type="N"/>
+<segment order="24" name="Majoration dimanché/férié: Quantité &lt;= 150 km" start="85" end="88" valeur="" presence="F" type="A"/>
+<segment order="25" name="Majoration dimanché/férié: Quantité &gt; 150 km" start="89" end="92" valeur="" presence="F" type="A"/>
+<segment order="26" name="Type supplément" start="93" end="93" valeur="" presence="F" type="N">
+<valeur valeur="0">Aéroport</valeur>
+<valeur valeur="1">Enfant prématuré</valeur>
+<valeur valeur="2">Appel d'urgence après régulation (centre 15 SAMU...)</valeur>
+</segment>
+<segment order="27" name="Quantité" start="94" end="95" valeur="" presence="F" type="N"/>
+<segment order="28" name="Montant des suppléments" start="96" end="101" valeur="" presence="F" type="N"/>
+<segment order="29" name="Nombre de péage et voies d'eau " start="102" end="103" valeur="" presence="F" type="N"/>
+<segment order="30" name="Montant des péages et voies d'eau" start="104" end="109" valeur="" presence="F" type="N"/>
+<segment order="31" name="Montant global des abattements" start="110" end="116" valeur="" presence="F" type="N"/>
+<segment order="32" name="Blanc" start="117" end="128" valeur="" presence="O" type="A"/>
+</ligne>
+<ligne rang="3" name="Type 4U" description="Complément facture détail">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="1" valeur="4" presence="O" type="N"/>
+<segment order="2" name="N° partenaire de santé" start="2" end="10" valeur="" presence="O" type="N"/>
+<segment order="3" name="blanc" start="11" end="11" valeur="" presence="F" type="A"/>
+<segment order="4" name="N° immatriculation assuré" start="12" end="24" valeur="" presence="O" type="A"/>
+<segment order="5" name="Clé du N° immatriculation" start="25" end="26" valeur="" presence="O" type="N"/>
+<segment order="6" name="N° facture" start="27" end="35" valeur="" presence="O" type="N"/>
+<segment pkey="O" order="7" name="Complément de type" start="36" end="36" valeur="U" presence="O" type="A"/>
+<segment order="8" name="Séquence" start="37" end="38" valeur="" presence="O" type="N"/>
+<segment order="9" name="Date départ" start="39" end="44" valeur="" presence="O" type="N"/>
+<segment order="10" name="Heure départ" start="45" end="48" valeur="" presence="O" type="N"/>
+<segment order="11" name="Lieu départ département commune" start="49" end="53" valeur="" presence="O" type="N"/>
+<segment order="12" name="N° véhicule" start="54" end="62" valeur="" presence="O" type="A"/>
+<segment order="13" name="Nom conducteur (8 premiers caractères)" start="63" end="70" valeur="" presence="O" type="A"/>
+<segment order="14" name="Prénom conducteur (3 premiers caractères)" start="71" end="73" valeur="" presence="O" type="A"/>
+<segment order="15" name="Nom accompagnateur (8 premiers caractères)" start="74" end="81" valeur="" presence="F" type="A"/>
+<segment order="16" name="Prénom accompagnateur (3 premiers caractères)" start="82" end="84" valeur="" presence="F" type="A"/>
+<segment order="17" name="Date arrivée" start="85" end="90" valeur="" presence="O" type="N"/>
+<segment order="18" name="Heure arrivée" start="91" end="94" valeur="" presence="O" type="N"/>
+<segment order="19" name="Lieu arrivée" start="95" end="99" valeur="" presence="O" type="N"/>
+<segment order="20" name="Nombre malades" start="100" end="100" valeur="" presence="O" type="N"/>
+<segment order="21" name="% abattement" start="101" end="102" valeur="" presence="F" type="N"/>
+<segment order="22" name="Montant abattement" start="103" end="108" valeur="" presence="F" type="N"/>
+<segment order="23" name="Distance parcourue" start="109" end="112" valeur="" presence="F" type="N"/>
+<segment order="24" name="Blanc" start="113" end="128" valeur="" presence="O" type="A"/>
+</ligne>
+<ligne rang="2" name="Type 6" description="Fin du lot">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="1" valeur="6" presence="O" type="N"/>
+<segment order="2" name="N° partenaire de santé + clé" start="2" end="10" valeur="" presence="O" type="N"/>
+<segment order="3" name="Nombre de factures" start="11" end="13" valeur="" presence="O" type="N"/>
+<segment order="4" name="Nombre de lignes actes" start="14" end="17" valeur="" presence="O" type="N"/>
+<segment order="5" name="Compatibilisation des enregistrements des types 2" start="18" end="21" valeur="" presence="O" type="N"/>
+<segment order="6" name="Total de tous les enregistrements de type 5" start="22" end="24" valeur="" presence="O" type="N"/>
+<segment order="7" name="Montant total général du lot prestations facturées" start="25" end="33" valeur="" presence="O" type="N"/>
+<segment order="8" name="Montant total général du lot prestations remboursables par l'organisme d'assurance maladie" start="34" end="42" valeur="" presence="O" type="N"/>
+<segment order="9" name="Montant total général du lot prestations remboursables par les organismes complémentaires" start="53" end="51" valeur="" presence="O" type="N"/>
+<segment order="10" name="N° de lot" start="52" end="54" valeur="" presence="O" type="N"/>
+<segment order="11" name="Indicateur de marquage des factures du lot" start="55" end="55" valeur="" presence="F" type="A">
+<valeur valeur="R">Factures réelles</valeur>
+<valeur valeur="T">Factures tests</valeur>
+<valeur valeur="D">Factures démonstrations</valeur>
+<valeur valeur=" "></valeur>
+</segment>
+<segment order="12" name="Type de facture" start="56" end="56" valeur="" presence="F" type="A">
+<valeur valeur=" ">Hors SESAM</valeur>
+<valeur valeur="F">SESAM ou SESAM dégradé</valeur>
+</segment>
+<segment order="13" name="Blanc" start="57" end="60" valeur="" presence="O" type="A"/>
+<segment order="14" name="N° agrément progiciel de santé" start="61" end="72" valeur="" presence="F" type="A"/>
+<segment order="15" name="N° agrément du dispositif portable" start="73" end="84" valeur="" presence="F" type="A"/>
+<segment order="16" name="Blanc" start="85" end="87" valeur="" presence="F" type="A"/>
+<segment order="17" name="N° d'identification du PS remplaçant" start="88" end="96" valeur="" presence="F" type="N"/>
+<segment order="18" name="Zone de certification" start="97" end="128" valeur="" presence="F" type="A"/>
+</ligne>
+<ligne rang="1" name="Type 999" description="Fin de fichier">
+<segment pkey="O" order="1" name="Type d'enregistrement" start="1" end="3" valeur="999" presence="O" type="N"/>
+<segment order="2" name="Type d'émetteur" start="4" end="5" valeur="" presence="O" type="A">
+<valeur valeur="TP">Partenaire de santé autre qu'établissement</valeur>
+<valeur valeur="TE">Partenaire de santé: établissement ou soins</valeur>
+<valeur valeur="SI">Autres émetteurs (ex: sociétés civiles professionnelles, sociétés civiles de moyens, etc...)</valeur>
+<valeur valeur="OT">Transmission entre un OCT et l'organisme d'assurance maladie</valeur>
+</segment>
+<segment order="3" name="Numéro émetteur" start="6" end="19" valeur="" presence="O" type="N"/>
+<segment order="4" name="blanc" start="2O" end="25" valeur="" presence="O" type="A"/>
+<segment order="5" name="Type de destinataire" start="26" end="27" valeur="" presence="O" type="A"/>
+<segment order="6" name="Numéro de destinataire" start="28" end="41" valeur="" presence="O" type="N"/>
+<segment order="7" name="blanc" start="42" end="47" valeur="" presence="O" type="A"/>
+<segment order="8" name="Application" start="48" end="49" valeur="" presence="O" type="A"/>
+<segment order="9" name="Identification du fichier" start="50" end="55" valeur="" presence="O" type="A"/>
+<segment order="10" name="Volume du fichier" start="56" end="63" valeur="" presence="O" type="N"/>
+<segment order="11" name="blanc" start="64" end="82" valeur="" presence="O" type="A"/>
+<segment order="12" name="Nombre de lots" start="83" end="85" valeur="" presence="O" type="N"/>
+<segment order="13" name="blanc" start="86" end="128" valeur="" presence="O" type="A"/>
+</ligne>
+</file>
