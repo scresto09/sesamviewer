@@ -1,5 +1,4 @@
-# sesam viewer - 0.5.1 - 18/12/2007
-=================================
+# sesam viewer
 
 Un visualisateur pour les fichiers sesam vitale.
 Pour le moment seul les fichiers B2 et NOEMIE sont supportés.
@@ -15,7 +14,7 @@ https://www.ameli.fr/haute-garonne/assure/documentation-technique/norme-noemie
 
 
 # Installation & prérequis
-========================
+
 Bibliothèques requises sous linux:
 - glib 2.6.0 ou supérieur
 - gtk 2.6.0 ou supérieur
@@ -29,7 +28,7 @@ make install
 
 
 # Auteur
-======
+
 Copyright (C) 2007 Sylvain Cresto
 N'hésitez pas à me contacter par email: <scresto@gmail.com>
 
@@ -38,7 +37,7 @@ http://scresto.free.fr/sesamviewer et https://github.com/scresto09/sesamviewer
 
 
 # Licence
-=======
+
 sesamviewer est un logiciel libre; vous pouvez le redistribuer et/ou
 le modifier sous les conditions définies par la licence GNU General
 Public License publiée par la Free Software Foundation; sous sa version 2
